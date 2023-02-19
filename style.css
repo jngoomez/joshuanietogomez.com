@@ -1,0 +1,94 @@
+header {
+    background-color: #333;
+    color: rgb(180, 164, 133);
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px 10px;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav li a {
+    color: rgb(142, 132, 130);
+    text-decoration: none;
+  }
+  
+  section {
+    margin: 50px 0;
+  }
+  
+  .artwork {
+    width: 500;
+    height: 500;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .artwork img {
+    width: 100%;
+  }
+  
+  .artwork h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .artwork p {
+    font-size: 30px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 25.5px;
+  }
+  
+  h2, h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 34px; /* customize the font size of h1 elements */
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .slide-in {
+    animation: slide-in 1.5s forwards;
+  }
+
+  body {
+    background-color: #a4a08ad4;
+  }
+
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .custom-size {
+    width: 800px; /* adjust the percentage to your desired width */
+    height: 800px; /* adjust the height proportionally based on the width */
+  }
+  .slide-in {
+    animation: slide-in 1.5s ease-out forwards;
+  }
+
+  
+  
