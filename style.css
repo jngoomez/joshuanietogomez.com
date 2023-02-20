@@ -1,112 +1,171 @@
 header {
-    background-color: #333;
-    color: rgb(180, 164, 133);
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px 10px;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav li a {
-    color: rgb(142, 132, 130);
-    text-decoration: none;
-  }
-  
-  section {
-    margin: 50px 0;
-  }
-  
-  .artwork {
-    position: relative;
-    width: 500;
-    height: 500;
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .artwork img {
-    width: 100%;
-        opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  }
-.artwork:hover img {
-  opacity: 0.5;
-  }
-  
-  .artwork h3 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .artwork p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 30px
-  margin: 0;
+  background-color: #333;
+  color: rgb(180, 164, 133);
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.5s ease;;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 25.5px;
-  }
-  
-  h2, h3 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    font-size: 34px; /* customize the font size of h1 elements */
-  }
-  
-  p {
-    line-height: 1.5;
-  }
+}
 
-  
-  @keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  
-  .slide-in {
-    animation: slide-in 1.5s forwards;
-  }
+nav ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px 10px;
+}
 
-  body {
-    background-color: #a4a08ad4;
-  }
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
 
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .custom-size {
-    width: 800px; /* adjust the percentage to your desired width */
-    height: 800px; /* adjust the height proportionally based on the width */
-  }
-  .slide-in {
-    animation: slide-in 1.5s ease-out forwards;
-  }
-.artwork:hover {
+nav li a {
+  color: rgb(142, 132, 130);
+  text-decoration: none;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.artwork {
+  position: relative;
+  width: 500;
+  height: 500;
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+.artwork img {
+  width: 100%;
+      opacity: 1;
+transition: opacity 0.5s ease-in-out;
+}
+.artwork:hover img {
+opacity: 0.5;
+}
+.artwork.hover {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.artwork.hover img {
+  filter: brightness(50%);
+}
+
+.artwork.hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.artwork.hover:hover img {
   transform: scale(1.1);
+}
+
+.artwork.hover:hover p {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.artwork.hover:hover:after {
+  opacity: 0;
+}
+
+.artwork.hover.duke {
+  width: 800px;
+  height: 533px;
+}
+.artwork.hover .text {
+  display: block;
+}
+
+.artwork .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.artwork.hover .text h3 {
+  margin-bottom: 10px;
+}
+
+.artwork.hover .text p {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+
+.artwork h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.artwork p {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+font-size: 30px
+margin 0;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+opacity: 0;
+transition: opacity 0.5s ease;;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 25.5px;
+}
+
+h2, h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 34px; /* customize the font size of h1 elements */
+}
+
+p {
+  line-height: 1.5;
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.slide-in {
+  animation: slide-in 1.5s forwards;
+}
+
+body {
+  background-color: #a4a08ad4;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.custom-size {
+  width: 800px; /* adjust the percentage to your desired width */
+  height: 800px; /* adjust the height proportionally based on the width */
+}
+.slide-in {
+  animation: slide-in 1.5s ease-out forwards;
+}
+.artwork:hover {
+transform: scale(1.1);
 }
 
   
