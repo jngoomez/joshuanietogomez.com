@@ -113,7 +113,7 @@ right: 0;
 font-size: 30px
 margin 0;
 padding: 10px;
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgb(254, 254, 254);
 color: #fff;
 opacity: 0;
 transition: opacity 0.5s ease;;
@@ -167,6 +167,7 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
+
 
   
   
