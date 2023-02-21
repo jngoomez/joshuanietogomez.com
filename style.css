@@ -39,7 +39,7 @@ section {
 transition: opacity 0.5s ease-in-out;
 }
 .artwork:hover img {
-opacity: 0.5;
+opacity: 0.2;
 }
 .artwork.hover {
   position: relative;
@@ -113,7 +113,7 @@ right: 0;
 font-size: 30px
 margin 0;
 padding: 10px;
-background-color: rgb(254, 254, 254);
+background-color: rgba(0, 0, 0, 0.5);
 color: #fff;
 opacity: 0;
 transition: opacity 0.5s ease;;
