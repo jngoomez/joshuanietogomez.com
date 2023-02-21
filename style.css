@@ -114,7 +114,7 @@ font-size: 30px
 margin 0;
 padding: 10px;
 background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
+color: #202020;
 opacity: 0;
 transition: opacity 0.5s ease;;
 }
@@ -167,7 +167,6 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
-
 
   
   
