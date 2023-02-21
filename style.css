@@ -48,7 +48,7 @@ opacity: 0.2;
 }
 
 .artwork.hover img {
-  filter: brightness(80%);
+  filter: brightness(60%);
 }
 
 .artwork.hover:after {
