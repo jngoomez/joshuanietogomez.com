@@ -39,7 +39,7 @@ section {
 transition: opacity 0.5s ease-in-out;
 }
 .artwork:hover img {
-opacity: 0.2;
+opacity: 0.5;
 }
 .artwork.hover {
   position: relative;
@@ -67,7 +67,7 @@ opacity: 0.2;
 
 .artwork.hover:hover p {
   transform: translateY(-50%);
-  opacity: .05;
+  opacity: .085;
 }
 
 .artwork.hover:hover:after {
@@ -167,6 +167,5 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
-
   
   
