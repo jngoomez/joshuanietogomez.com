@@ -1,6 +1,6 @@
 header {
   background-color: #333;
-  color: rgb(222, 227, 229);
+  color: rgb(150, 148, 114);
   padding: 10px;
 }
 
@@ -16,7 +16,7 @@ nav li {
 }
 
 nav li a {
-  color: rgb(237, 232, 235);
+  color: rgb(140, 135, 106);
   text-decoration: none;
 }
 
@@ -149,7 +149,7 @@ p {
 }
 
 body {
-  background-color: #a4a08ad4;
+  background-color: #f5f8f0d4;
 }
 
 .centered {
@@ -167,5 +167,3 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
-
-  
