@@ -1,6 +1,6 @@
 header {
   background-color: #333;
-  color: rgb(180, 164, 133);
+  color: rgb(222, 227, 229);
   padding: 10px;
 }
 
@@ -121,7 +121,7 @@ transition: opacity 0.5s ease;;
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 18.5px;
+  font-size: 25.5px;
 }
 
 h2, h3 {
@@ -167,5 +167,3 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
-  
-  
