@@ -96,7 +96,7 @@ opacity: 0.5;
 
 .artwork.hover .text p {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 14.5px;
 }
 
 
@@ -121,13 +121,13 @@ transition: opacity 0.5s ease;;
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 25.5px;
+  font-size: 15px;
 }
 
 h2, h3 {
   font-family: Georgia, serif;
   font-weight: normal;
-  font-size: 34px; /* customize the font size of h1 elements */
+  font-size: 16px; /* customize the font size of h1 elements */
 }
 
 p {
@@ -167,3 +167,10 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
+
+.cell{
+  width:33%;
+  height:350px;
+  margin:0 15px;
+}
+  
