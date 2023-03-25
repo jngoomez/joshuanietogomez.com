@@ -19,36 +19,37 @@
         max-width: 100%;
         height: auto;
       }
+
       img {
         max-width: 100%;
         height: auto;
         max-height: 100vh;
       }
-      
     </style> 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-      var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        center:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:3
+          },
+          1000:{
+            items:5
+          }
+        }
+      })
     </script>
   </head>
   <body>
     <header>
-      <h1 class="slide-in">Minsoup's Works</h1>
+      <h1 class="slide-in">Minsoup's ArtWorks</h1>
       <nav>
         <ul>
           <li><a href="#gallery">Gallery</a></li>
@@ -62,342 +63,226 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="artwork">
-      <div class="image-container"></div>
-        <img src="IMG-4675.jpg" alt="I disappeared, but I was never really here" class= "centered custom-sized slide-in zoom-in">
-        <h3>I disappeared, but I was never really here</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-          <img src="IMG-4121.jpg" alt="The Things I Wish I said" class="centered custom-sized slide-in zoom-in">
-          <h3>The Things I wish I said</h3>
-          <p>2023
-          </p>
+            <div class="image-container">
+              <img src="IMG-4121.jpg" alt="Artwork 1">
+              <div class="artwork-description">
+                <h3>All The Things I Should Have Said</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-4675.jpg" alt="Artwork 2">
+              <div class="artwork-description">
+                <h3>I Disappeared, but i was never really here</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3769.jpg" alt="Artwork 3">
+              <div class="artwork-description">
+                <h3>Portrait Study</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="EC35BEBF-CA17-4259-B1E8-8E461754E706.jpg" alt="Artwork 4">
+              <div class="artwork-description">
+                <h3>A Routine</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="charcoaldrawing woman by me art vine.jpg" alt="Artwork 5">
+              <div class="artwork-description">
+                <h3>A last glimpse</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="E558989E-409E-4F4F-84A1-925C58858C8E.JPG" alt="Artwork 6">
+              <div class="artwork-description">
+                <h3>I let it all happen</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="664407ED-23D8-4364-AFE8-C07680C9CEC0.JPG" alt="Artwork 7">
+              <div class="artwork-description">
+                <h3>Beneath the flesh</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="53D1A150-0399-4C70-A7C2-D1DFA6A61A93.JPG" alt="Artwork 8">
+              <div class="artwork-description">
+                <h3>Beneath the flesh</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="A42DF90C-CA4A-46F5-9712-2785DFCCFBD1.JPG" alt="Artwork 9">
+              <div class="artwork-description">
+                <h3>Between the lines separating you and me</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="A89BAB21-EEB4-4BC0-B8C0-6BD79C8C72FB.jpg" alt="Artwork 10">
+              <div class="artwork-description">
+                <h3>Ink Sketch</h3>
+                <p>2021/2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-6407.JPG" alt="Artwork 11">
+              <div class="artwork-description">
+                <h3>The Shards Of All Your Colors</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3245.jpg" alt="Artwork 12">
+              <div class="artwork-description">
+                <h3>Pencil Sketch</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3243.jpg" alt="Artwork 13">
+              <div class="artwork-description">
+                <h3>Pencil Sketch</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-2964.jpg" alt="Artwork 14">
+              <div class="artwork-description">
+                <h3>Pencil Sketch</h3>
+                <p>Year created: 2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3369.jpg" alt="Artwork 15">
+              <div class="artwork-description">
+                <h3>Gesture Sketch</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3437.jpg" alt="Artwork 16">
+              <div class="artwork-description">
+                <h3>Chameleon Sketch</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3678.jpg" alt="Artwork 17">
+              <div class="artwork-description">
+                <h3>Awake</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3845.jpg" alt="Artwork 18">
+              <div class="artwork-description">
+                <h3>Watch as I fall apart</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-3907.jpg" alt="Artwork 19">
+              <div class="artwork-description">
+                <h3>Lost, I stay inside my own bubble</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-7510.jpeg" alt="Artwork 20">
+              <div class="artwork-description">
+                <h3>Ink Sketch</h3>
+                <p>2023</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-6859.jpg" alt="Artwork 21">
+              <div class="artwork-description">
+                <h3>The Nun</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="IMG-2734.jpg" alt="Artwork 22">
+              <div class="artwork-description">
+                <h3>Under the spotlight, I hide in the dark</h3>
+                <p>2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="artwork2.jpg" alt="Artwork 23">
+              <div class="artwork-description">
+                <h3>Title of Artwork 1</h3>
+                <p>Year created: 2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="artwork2.jpg" alt="Artwork 24">
+              <div class="artwork-description">
+                <h3>Title of Artwork 1</h3>
+                <p>Year created: 2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="artwork2.jpg" alt="Artwork 25">
+              <div class="artwork-description">
+                <h3>Title of Artwork 1</h3>
+                <p>Year created: 2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="artwork2.jpg" alt="Artwork 26">
+              <div class="artwork-description">
+                <h3>Title of Artwork 1</h3>
+                <p>Year created: 2022</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-container">
+              <img src="artwork2.jpg" alt="Artwork 27">
+              <div class="artwork-description">
+                <h3>Title of Artwork 1</h3>
+                <p>Year created: 2022</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-    </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="IMG-3907.jpg" alt="Charcoal Portrait of child" class= "centered custom-sized slide-in zoom-in">
-        <h3>Lost, I stay in my own bubble</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="IMG-4630.jpg" alt="ink sketch with digital coloring" class= "centered custom-sized slide-in zoom-in">
-        <h3>Ink Sketch</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="IMG-3769.jpg" alt="Charcoal Portrait Study" class= "centered custom-sized slide-in zoom-in">
-        <h3>Portrait Study</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="charcoaldrawing woman by me art vine.jpg" alt="A Last Glimpse" class= "centered custom-sized slide-in zoom-in">
-        <h3>A Last Glimpse</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="EC35BEBF-CA17-4259-B1E8-8E461754E706.jpg" alt="A Routine" class="centered custom-sized slide-in zoom-in">
-        <h3>A Routine</h3>
-        <p>2023
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-      <div class="image-container"></div>
-        <img src="IMG-2821.jpg" alt="Sculpture Study" class= "centered custom-sized slide-in zoom-in">
-        <h3>Sculpture Study</h3>
-        <p>2023  
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-3678.jpg" alt="charcoal drawing wake" class="centered custom-sized slide-in zoom-in">
-        <h3>Awake</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-          <img src="E558989E-409E-4F4F-84A1-925C58858C8E.JPG" alt="I Let it all happen" class="centered custom-sized slide-in zoom-in">
-          <h3>I Let It All Happen</h3>
-          <p>2023
-          </p>
-        </div>
-      </div>
-    </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="664407ED-23D8-4364-AFE8-C07680C9CEC0.JPG" alt="Ink Skull face" class="centered custom-sized slide-in zoom-in">
-        <h3>Beneath The Flesh</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-3845.jpg" alt="Watch as I fall apart" class= "centered custom-sized slide-in zoom-in">
-        <h3>Watch as I fall apart</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-6859.jpg" alt="The nun" class="centered custom-sized slide-in zoom-in">
-        <h3>The Nun</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-3243.jpg" alt="whale and polar bear" class="centered custom-sized slide-in zoom-in">
-        <h3>Pencil Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2734.jpg" alt="Under The Spotlight, I Hide In The Dark" class="centered custom-sized slide-in zoom-in">
-        <h3>Under The Spotlight, I Hide In The Dark</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2637 (1).jpg" alt="Face To Face- A Moment Of Truth" class="centered custom-sized slide-in zoom-in">
-        <h3>Face To Face- A Moment Of Truth</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-9046.jpg" alt="Dukey" class="centered custom-sized slide-in zoom-in">
-        <h3>Dukey</h3> 
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="81F6D6A9-7169-454D-8AAC-6D3E284BBF38.JPG" alt="Gesture Drawing" class="centered custom-sized slide-in zoom-in">
-        <h3>Gesture Drawing</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="A89BAB21-EEB4-4BC0-B8C0-6BD79C8C72FB.jpg" alt="Old man holding a bag" class="centered custom-sized slide-in zoom-in">
-        <h3>Holding On To You</h3>
-        <p>2020/2021
-        </p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2483.jpg" alt="man marker sketch charcoal technique" class="centered custom-sized slide-in zoom-in">
-        <h3>Marker Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="A42DF90C-CA4A-46F5-9712-2785DFCCFBD1.JPG" alt="In Touch" class="centered custom-sized slide-in zoom-in">
-        <h3>Between The Lines</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2628.jpg" alt="Skeleton Sketch" class="centered custom-sized slide-in zoom-in">
-        <h3>Skeleton Study</h3>
-        <p>2020/2021</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-5531.jpg" alt="Frog Sketches" class="centered custom-sized slide-in zoom-in">
-        <h3>2 Toads and A Frog</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2965.jpg" alt="pencil drawing old man with a stick" class="centered custom-sized slide-in zoom-in">
-        <h3>Pencil Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="B862AC5A-477C-4161-9E49-DD8CD21D4470.JPG" alt="rooster" class="centered custom-sized slide-in zoom-in">
-        <h3>Rooster</h3>
-        <p>2020/2021</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="499C6F43-4AA2-4346-A51D-6B9EDC7F106E.JPG" alt="marker face studies many" class="centered custom-sized slide-in zoom-in">
-        <h3>Portrait Studies</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="4BAD6D2F-921F-4137-8D78-D8EA77167D95.JPG" alt="octopus ink sketch" class="centered custom-sized slide-in zoom-in">
-        <h3>Octopus Sketch</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2655.jpg" alt="old man portrait 2 charcoal" class="centered custom-sized slide-in zoom-in">
-        <h3>The Golden Age</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-6407.JPG" alt="fragments of color" class="centered custom-sized slide-in zoom-in">
-        <h3>Fragments Of Color</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-6311.jpg" alt="marker sketch 1 face" class="centered custom-sized slide-in zoom-in">
-        <h3>Portrait Study</h3>
-        <p>2022</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="65BEC9DA-FE33-416D-8233-C83FC842713C.JPG" alt="Gesture Drawing 2" class="centered custom-sized slide-in zoom-in">
-        <h3>Gesture Drawing</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-2964.jpg" alt="man reading book" class="centered custom-sized slide-in zoom-in">
-        <h3>Pencil Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-3369.jpg" alt="Gesture Drawing" class="centered custom-sized slide-in zoom-in">
-        <h3>Pencil Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-3245.jpg" alt="Whale and fish" class="centered custom-sized slide-in zoom-in">
-        <h3>Pencil Sketch</h3>
-        <p>2023</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-0469.jpg" alt="Old man during Commute" class="centered custom-sized slide-in zoom-in">
-        <h3>Going Home</h3>
-        <p>2020/2021</p>
-      </div>
-    </div>
-  </div>
-      <div class="swiper-slide">
-      <div class="artwork">
-        <div class="image-container"></div>
-        <img src="IMG-5559.jpg" alt="AstroFish" class="centered custom-sized slide-in zoom-in">
-        <h3>Floating</h3>
-        <p>2020/2021</p>
-      </div>
-      <div class="swiper-pagination"></div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
     </section>
     <section id="about">
       <h2>About The Artist</h2>
@@ -432,17 +317,6 @@
       <div class="email">Email: pewpew7116@gmail.com</div>
       </div>
 
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="https://picsum.photos/id/1000/800/600" alt="image1"></div>
-          <div class="swiper-slide"><img src="https://picsum.photos/id/1001/800/600" alt="image2"></div>
-          <div class="swiper-slide"><img src="https://picsum.photos/id/1002/800/600" alt="image3"></div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </div>
     </section>
     <section id="Artist's Statement">
         <h2>Artist's Statement</h2>
