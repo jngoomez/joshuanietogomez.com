@@ -16,7 +16,7 @@ nav li {
 }
 
 nav li a {
-  color: rgb(142, 132, 130);
+  color: rgb(237, 232, 235);
   text-decoration: none;
 }
 
@@ -167,3 +167,5 @@ body {
 .artwork:hover {
 transform: scale(1.05);
 }
+
+  
