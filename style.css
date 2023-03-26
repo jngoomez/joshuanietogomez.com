@@ -177,7 +177,7 @@ transform: scale(1.05);
 }
 .cell img{
   width:100%;
-  height:350px;
+  height:100%;
   object-fit:cover;
 }
   
