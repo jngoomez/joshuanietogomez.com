@@ -150,3 +150,31 @@ img {
 .owl-dot.active {
   background: rgba(0, 0, 0, 0.5);
 }
+
+/* set default arrow size and position */ /*customization of devices*/
+.carousel-cell-nav .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* adjust arrow size and position on smaller screens */
+@media only screen and (max-width: 600px) {
+  .carousel-cell-nav .flickity-prev-next-button {
+    width: 20px;
+    height: 20px;
+    top: 45%;
+    transform: translateY(-50%); /*previously -50% */
+  }
+}
+
+/* adjust arrow size and position on larger screens */
+@media only screen and (min-width: 1200px) {
+  .carousel-cell-nav .flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+}
