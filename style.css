@@ -287,12 +287,13 @@ the artist's profile picture:*/
 /* Carousel styles */
 .carousel-cell {
   width: 100%;
-  height: 200px;
+  height: 500px;/*previously 200*/
   overflow: hidden;
 }
 
 .carousel-cell img {
+  
   height: 100%;
-  width: auto;
+  width: 100%; /*previously auto*/
   display: block;
 }
