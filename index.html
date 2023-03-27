@@ -11,46 +11,10 @@
     <title>Minsoup's Works</title>
     <style>
       
-       body {
-  background-color:rgb(226, 226, 209);
-}
-      .image-container {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .image-container img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        max-height: 100vh;
-      }
     </style> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
     <script>
-      $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        center:true,
-        responsive:{
-          0:{
-            items:1
-          },
-          600:{
-            items:3
-          },
-          1000:{
-            items:5
-          }
-        }
-      })
+
     </script>
   </head>
   <body>
@@ -271,24 +235,37 @@
 
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script type="text/javascript">
-        $('.main-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        wrapAround:true, 
-        freeScroll:true,
-        autoPlay: true,
-// advance cells every 2 seconds
-        prevNextButtons: false,
-        pageDots: false,
-        });
+          var flkty = new Flickity('.carousel', {
+  // options
+  cellAlign: 'center',
+  contain: true,
+  prevNextButtons: true,
+  pageDots: false,
+  autoPlay: 3000,
+  wrapAround: true,
+  resize: true,
+  percentPosition: false,
+  imagesLoaded: true,
+  lazyLoad: 1,
+  selectedAttraction: 0.05,
+  friction: 0.7,
+  freeScroll: false,
+  draggable: '>1',
+  arrowShape: {
+    x0: 10,
+    x1: 60, y1: 50,
+    x2: 65, y2: 45,
+    x3: 20
+  }
+});
 
-    $('.carousel-button-next').on( 'click', function() {
-      flkty.next();
-    });
+  $('.swiper-button-next').on( 'click', function() {
+    flkty.next();
+  });
 
-    $('.carousel-button-prev').on( 'click', function() {
-      flkty.previous();
-    });
+  $('.swiper-button-prev').on( 'click', function() {
+    flkty.previous();
+  });
       </script>
     </body>
     
