@@ -193,23 +193,19 @@ buttons*/
 .owl-dot.active {
   background: rgba(0, 0, 0, 0.5);
 }
-
-/* set default arrow size and position */ /*customization of devices*/
-.carousel-cell-nav .flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* adjust arrow size and position on smaller screens */
 @media only screen and (max-width: 600px) {
-  .carousel-cell-nav .flickity-prev-next-button {
-    width: 20px;
-    height: 20px;
-    top: 45%;
-    transform: translateY(-50%); /*previously -50% */
-  }
+/* Adjust the width and height of the carousel cell images */
+.carousel-cell {
+width: 90%;
+margin: 0 auto;
+}
+/* Adjust the position of the navigation arrows */
+.carousel-cell-nav .flickity-prev-next-button {
+width: 20px;
+height: 20px;
+top: 45%;
+transform: translateY(-50%);
+}
 }
 
 /* adjust arrow size and position on larger screens */
