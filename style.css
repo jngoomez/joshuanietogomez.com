@@ -274,3 +274,6 @@ img {
     transform: translateY(-50%);
   }
 }
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
