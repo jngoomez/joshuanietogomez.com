@@ -217,35 +217,6 @@ transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
-.swiper-button-next, .swiper-button-prev { /* styling for the "swiper-button-next" and 
-  "swiper-button-prev" classes to position and style the navigation 
-  buttons for the gallery slider:*/
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.swiper-button-next::before, .swiper-button-prev::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  transform: rotate(45deg);
-}
 
 /* styling for the "artwork-description"
  class to position and style the text 
