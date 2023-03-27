@@ -308,11 +308,6 @@ the artist's profile picture:*/
 }
 
 @media only screen and (max-width: 600px) {
-  .carousel-cell {
-    width: 100%;
-    height: 100%;
-    margin-right: auto;
-  }
   .carousel-cell img{
     width: 100%;
     height: 50vh;
