@@ -287,8 +287,11 @@ the artist's profile picture:*/
 
 /* Carousel styles */
 .carousel-cell {
-  width: 100%;
+  width: 28%;
   height: 500px;/*previously 200*/
+  margin-right: 10px;
+  border-radius: 5px; /*new*/
+  counter-increment: carousel-cell;
   overflow: hidden;
 }
 
