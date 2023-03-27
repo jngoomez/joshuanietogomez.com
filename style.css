@@ -101,7 +101,7 @@ img {
 .mySlides {
   display: none;
   }
-  
+
 /* Navigation arrow styling next and prev
 buttons*/
 .prev, 
@@ -282,4 +282,17 @@ the artist's profile picture:*/
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Carousel styles */
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carousel-cell img {
+  height: 100%;
+  width: auto;
+  display: block;
 }
