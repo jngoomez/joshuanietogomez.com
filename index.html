@@ -1,209 +1,110 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Joshua Nieto Gomez - Art Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    
-    <title>Minsoup Art</title>
-    <style>
-      
-    </style> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
-    <script>
-
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1 class="slide-in">Minsoup Art</h1>
-      <nav>
-        <ul>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sandwich Menu -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#paintings">Paintings</a></li>
+            <li><a href="#sketches">Sketches</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="https://www.instagram.com/yourinstagram" target="_blank">Instagram</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <section id="gallery">
-      <h2>Gallery</h2>
-      
+    </nav>
 
-      <div class="carousel">
-        <div class="carousel-cell">
-              <img src="252EDFEB-C69E-474F-A5B8-073F16E63AB9.jpeg" alt="mini painting midterms">
-              <div class="artwork-description">
-                <h3>first snow</h3></h3>
-                <p>2024</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="0421B1D4-8DEA-4D15-9365-293B37AA8584.jpeg" alt="jacket sketch 1">
-              <div class="artwork-description">
-                <h3>(-0-)
-                </h3>
-                <p>2023</p>
-            </div>
-          </div>
-             <div class="carousel-cell">
-              <img src="portrait sketch painting.jpeg" alt="portrait sketch painting">
-              <div class="artwork-description">
-                <h3>Portrait sketch
-                </h3>
-                <p>2024</p>
-            </div>
-          </div>
-           <div class="carousel-cell">
-              <img src="dukey sketch 2023.jpeg" alt="Dukey">
-              <div class="artwork-description">
-                <h3>Dukey
-                </h3>
-                <p>2023</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="A71619D4-90D0-4DA5-9585-D76DD243AA7D.jpeg" alt="Livia">
-              <div class="artwork-description">
-                <h3>Liv
-                </h3>
-                <p>2023</p>
-            </div>
-          </div>
-         <div class="carousel-cell">
-              <img src="IMG-6509.jpg" alt="gorilla">
-              <div class="artwork-description">
-                <h3>Gorilla sketch</h3>
-                <p>2023</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="EA6AB2C2-A197-49AD-912E-B476848C7287.jpeg" alt="sat day monkey">
-              <div class="artwork-description">
-                <h3>monkey</h3>
-                <p>2023</p>
-            </div>
-          </div>
-   <div class="carousel-cell">
-              <img src="IMG-6404.jpg" alt="afro">
-              <div class="artwork-description">
-                <h3>sketch</h3>
-                <p>2023</p>
-            </div>
-          </div>
-          <div class="carousel-cell">
-              <img src="IMG-5660.jpg" alt="shine brighter in the dark">
-              <div class="artwork-description">
-                <h3>the stars shine 
-                 brighter in the dark</h3>
-                <p>2023</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="IMG-4121.jpg" alt="Artwork 1">
-              <div class="artwork-description">
-                <h3>All The Things I Should Have Said</h3>
-                <p>2023</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="A6B1C5A9-9C81-4601-8221-AC1F641D3F83.jpeg" alt="Artwork 4">
-              <div class="artwork-description">
-                <h3>will it all fall away?</h3>
-                <p>2023</p>
-            </div>
-          </div>
-        <div class="carousel-cell">
-              <img src="EC35BEBF-CA17-4259-B1E8-8E461754E706.jpg" alt="Artwork 4">
-              <div class="artwork-description">
-                <h3>A Routine</h3>
-                <p>2022</p>
-            </div>
-          </div>
-
-      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-      <script type="text/javascript">
-          var flkty = new Flickity('.carousel', {
-  // options
-
-  groupCells: true,
-  // if set to true,
-  // group cells that fit in carousel viewport
-  groupCells: 3,
-  // if set to a number, group cells by that number
-  groupCells: '80%',
-  // if set to a percent string,
-  // group cells that fit in the percent of
-  // the width of the carousel viewport
-  // other options
-  cellAlign: 'center',
-  contain: true,
-  prevNextButtons: true,
-  pageDots: false,
-  autoPlay: 3000,
-  wrapAround: true,
-  resize: true,
-  percentPosition: false,
-  imagesLoaded: true,
-  lazyLoad: 1,
-  selectedAttraction: 0.05,
-  friction: 0.7,
-  freeScroll: false,
-  draggable: '>1',
-  arrowShape: {
-    x0: 10,
-    x1: 60, y1: 50,
-    x2: 65, y2: 45,
-    x3: 20
-  },
-  responsive: [{
-      breakpoint: 600,
-      settings: {
-        groupCells: 1
-      }
-    }]
-});
-
-  $('.swiper-button-next').on( 'click', function() {
-    flkty.next();
-  });
-
-  $('.swiper-button-prev').on( 'click', function() {
-    flkty.previous();
-  });
-      </script>
-    </body>
-    
-    <section>
-    <section id="about">
-      <h2>About The Artist</h2>
-      <p>My name is Joshua Nieto and I'm just a 17-year-old trying to create cool stuff. Thank you for checking out my art!</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Joshua Nieto Gomez</h1>
+            <p>Visual Art & Creative Expressions</p>
+        </div>
     </section>
 
-      </div>
+    <!-- Paintings Section -->
+    <section id="paintings">
+        <h2>Paintings</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/painting1.jpg" alt="Painting 1">
+                <div class="overlay">
+                    <h3>First Snow</h3>
+                    <p>2024</p>
+                </div>
+            </div>
+            <!-- Repeat for each painting -->
+        </div>
+    </section>
+
+    <!-- Sketches Section -->
+    <section id="sketches">
+        <h2>Sketches</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/sketch1.jpg" alt="Sketch 1">
+                <div class="overlay">
+                    <h3>Portrait Sketch</h3>
+                    <p>2024</p>
+                </div>
+            </div>
+            <!-- Repeat for each sketch -->
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2>Shop</h2>
+        <p>Coming soon! Stay tuned for prints and merchandise.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>My name is Joshua Nieto Gomez, and I'm a 17-year-old artist exploring the world through my creations. Thank you for visiting my portfolio!</p>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact Me</h2>
-      <p>For inquiries and commissions, please email <a href="mailto:pewpew7116@gmail.com">pewpew7116@gmail.com</a>.</p>
-      <div class="contact-content">
-        <div class="contact-form">
-          <form method="post" action= "https://formspree.io/f/xwkjrpjp">
-      <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <h2>Contact</h2>
+        <form class="contact-form" action="https://formspree.io/f/xwkjrpjp" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Joshua Nieto Gomez. All Rights Reserved.</p>
+    </footer>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        // Sandwich Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
 
-        <input type="submit" value="Send">
-      </form>
-  
-<footer>
-  <p>© 2023 Minsoup's Works. All Rights Reserved.</p>
-  </footer>
-
-  </body>
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
