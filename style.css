@@ -83,7 +83,8 @@ a:hover {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Adjust spacing between items */
+    align-items: center; /* Vertically center items */
 }
 
 .nav-list li a {
@@ -107,7 +108,6 @@ a:hover {
 .nav-list li a:hover::after {
     width: 100%;
 }
-
 /* Hero Section */
 #hero {
     height: 100vh;
@@ -146,6 +146,18 @@ a:hover {
     font-size: 1.5rem;
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.8);
+}
+
+/* Instagram Logo */
+.instagram-logo {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    filter: grayscale(100%) brightness(150%); /* Make it monochrome/faded */
+    transition: filter 0.3s ease;
+}
+
+.instagram-logo:hover {
+    filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
 
 /* Gallery Sections */
