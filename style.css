@@ -301,3 +301,21 @@ footer {
     margin: 0 auto 40px;
     color: rgba(255, 255, 255, 0.8);
 }
+
+/* Shop Section */
+#shop {
+    padding: 60px 10%;
+    background-color: #111;
+    text-align: center;
+}
+
+.shop-box {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
