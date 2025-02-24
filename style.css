@@ -244,7 +244,8 @@ a:hover {
     text-align: center;
 }
 
-.contact-form {
+.contact-message {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -252,41 +253,26 @@ a:hover {
     border-radius: 10px;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.envelope-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #222;
+.contact-message p {
+    font-size: 1.2rem;
     color: #fff;
-    font-size: 1rem;
+    margin: 0;
 }
 
-.contact-form textarea {
-    resize: vertical;
-    height: 150px;
+.contact-message a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
-.contact-form button {
-    background-color: #fff;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #ccc;
+.contact-message a:hover {
+    color: #ccc;
 }
 
 /* Footer */
