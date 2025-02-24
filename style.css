@@ -331,3 +331,26 @@ footer {
     margin: 0 auto 40px;
     color: rgba(255, 255, 255, 0.8);
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        right: -100%;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+}
