@@ -245,17 +245,17 @@ a:hover {
 }
 
 .contact-message {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
 }
 
 .envelope-image {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px;
 }
 
@@ -274,7 +274,6 @@ a:hover {
 .contact-message a:hover {
     color: #ccc;
 }
-
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
