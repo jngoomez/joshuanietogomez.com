@@ -159,27 +159,30 @@ a:hover {
 .instagram-logo:hover {
     filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
-
 /* Flipbook Container */
 #bb-bookblock {
-    width: 600px;
-    height: 400px;
-    margin: 50px auto;
+    width: 600px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 50px auto; /* Center the flipbook */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow */
 }
 
+/* Flipbook Pages */
 .bb-item {
-    background: #fff;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fff; /* White background for pages */
 }
 
 .bb-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    max-width: 100%; /* Ensure images fit within the page */
+    max-height: 100%; /* Ensure images fit within the page */
+    object-fit: contain; /* Maintain aspect ratio */
 }
 
 /* Navigation Controls */
@@ -206,8 +209,8 @@ nav {
 /* Mobile Styles */
 @media (max-width: 768px) {
     #bb-bookblock {
-        width: 90%;
-        height: 300px;
+        width: 90%; /* Smaller width for mobile */
+        height: 300px; /* Smaller height for mobile */
     }
 
     .bb-nav-prev, .bb-nav-next {
