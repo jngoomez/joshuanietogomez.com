@@ -204,10 +204,13 @@ a:hover {
     }
 }
 
-/* Shop Section */
+/* Shop Section with Custom Texture Background */
 #shop {
     padding: 60px 10%;
-    background-color: #111;
+    background-image: url('images/texture.jpg'); /* Add your texture image */
+    background-size: cover; /* Ensures the texture covers the entire section */
+    background-position: center; /* Centers the texture */
+    background-repeat: no-repeat; /* Prevents the texture from repeating */
     text-align: center;
 }
 
@@ -232,7 +235,7 @@ a:hover {
 }
 
 .product-item {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for products */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
