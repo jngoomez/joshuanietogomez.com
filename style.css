@@ -170,7 +170,7 @@ a:hover {
 .sketches-gallery {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between images */
+    gap: 0px; /* Space between images */
     max-width: 1200px; /* Adjust as needed */
     margin: 0 auto;
 }
@@ -196,7 +196,7 @@ a:hover {
 @media (max-width: 768px) {
     .sketches-gallery {
         flex-direction: column; /* Stack images vertically on mobile */
-        gap: 10px; /* Reduce space between images */
+        gap: 5px; /* Reduce space between images */
     }
 
     .sketch-item {
