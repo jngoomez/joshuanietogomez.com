@@ -211,21 +211,64 @@ a:hover {
     text-align: center;
 }
 
-.shop-box {
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fff;
+#shop h1 {
+    font-size: 2.5rem;
     color: #fff;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
 }
 
+#shop h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
 
-.shop-box:hover {
-    background-color: #fff;
-    color: #000;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width */
+    gap: 20px; /* Space between products */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.product-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 15px 0 5px;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    #shop h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    #shop h2 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
 }
 
 
