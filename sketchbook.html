@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sketchbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.css">
+    <style>
+        #flipbook {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .page {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="flipbook">
+        <div class="page"><img src="images/sketch1.jpg" alt="Sketch 1"></div>
+        <div class="page"><img src="images/sketch2.jpg" alt="Sketch 2"></div>
+        <div class="page"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
+        <div class="page"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#flipbook').turn({
+                width: 600,
+                height: 400,
+                autoCenter: true
+            });
+        });
+    </script>
+</body>
+</html>
