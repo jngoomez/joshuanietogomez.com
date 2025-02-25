@@ -160,47 +160,40 @@ a:hover {
     filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
 
-/* Sketches Section */
-#sketches {
-    padding: 40px 10%;
+/* Flipbook Section */
+#flipbook-section {
+    padding: 60px 10%;
     background-color: #000;
     text-align: center;
 }
 
-.sketches-gallery {
+#flipbook {
+    width: 600px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    margin: 0 auto; /* Centers the flipbook horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+}
+
+/* Flipbook Pages */
+.page {
+    background: #fff; /* White background for pages */
     display: flex;
     justify-content: center;
-    gap: 0px; /* Space between images */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
+    align-items: center;
+    border: 1px solid #ddd; /* Optional: Adds a border */
 }
 
-.sketch-item {
-    flex: 1; /* Each image takes equal space */
-    max-width: 50%; /* Each image takes up half the container */
-}
-
-.sketch-item img {
-    width: 100%; /* Ensures the image fills its container */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Zooms in and crops the image */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    transition: transform 0.3s ease; /* Optional: Adds hover effect */
-}
-
-.sketch-item img:hover {
-    transform: scale(1.05); /* Optional: Adds hover effect */
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures images fit within the page */
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .sketches-gallery {
-        flex-direction: column; /* Stack images vertically on mobile */
-        gap: 5px; /* Reduce space between images */
-    }
-
-    .sketch-item {
-        max-width: 100%; /* Each image takes full width on mobile */
+    #flipbook {
+        width: 90%; /* Smaller width for mobile */
+        height: 300px; /* Smaller height for mobile */
     }
 }
 
