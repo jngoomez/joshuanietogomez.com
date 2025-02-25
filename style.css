@@ -246,16 +246,17 @@ a:hover {
 .contact-message {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .envelope-image {
-    max-width: 400px; /* Adjust size as needed */
-    width: 100%; /*scales up or down on smaller screens*/
-    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Adjust size as needed */
+    width: 100%; /* Scales down on smaller screens */
+    height: auto; /* Maintains aspect ratio */
     margin-bottom: 20px;
 }
 
@@ -274,19 +275,16 @@ a:hover {
 .contact-message a:hover {
     color: #ccc;
 }
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .envelope-image {
+        max-width: 120px; /* Smaller size for mobile */
     }
 
-    .envelope-image {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-    animation: bounce 2s infinite; /* Optional animation */
+    .contact-message p {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
 }
 
 /* Footer */
