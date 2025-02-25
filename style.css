@@ -254,7 +254,8 @@ a:hover {
 }
 
 .envelope-image {
-    width: 150px; /* Adjust size as needed */
+    max-width: 200px; /* Adjust size as needed */
+    width: 100%; /*scales up or down on smaller screens*/
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px;
 }
