@@ -207,7 +207,7 @@ a:hover {
 /* Shop Section with Custom Texture Background */
 #shop {
     padding: 60px 10%;
-    background-image: url('images/texture.jpg'); /* Add your texture image */
+    background-image: url('BACKGROUNDSHOPWEB2.png'); /* Add your texture image */
     background-size: cover; /* Ensures the texture covers the entire section */
     background-position: center; /* Centers the texture */
     background-repeat: no-repeat; /* Prevents the texture from repeating */
