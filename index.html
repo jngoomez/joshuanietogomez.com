@@ -46,15 +46,22 @@
     </section>
 
  <!-- Flipbook Section -->
-<section id="flipbook-section">
-    <h2>Sketches</h2>
-    <div id="flipbook">
-        <div class="page"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
-        <div class="page"><img src="ratha.jpg" alt="Sketch 2"></div>
-        <div class="page"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
-        <div class="page"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
-    </div>
-</section>
+    <section id="flipbook-section">
+        <h2>Sketches</h2>
+        <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
+            <div class="bb-item"><img src="ratha.jpg" alt="Sketch 2"></div>
+            <div class="bb-item"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
+            <div class="bb-item"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <nav>
+            <a id="bb-nav-prev" href="#" class="bb-nav-prev">Previous</a>
+            <a id="bb-nav-next" href="#" class="bb-nav-next">Next</a>
+        </nav>
+    </section>
+
     
    <!-- Shop Section -->
     <section id="shop">
@@ -105,52 +112,76 @@
         <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script>
-        // Sandwich Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
+<!-- Remove Flickity script if not used -->
+<!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navList.classList.toggle('active');
-        });
+<script>
+    // Sandwich Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
 
-        // Smooth Scroll Effects for Navigation
-        let lastScroll = 0;
-        const navbar = document.querySelector('.navbar');
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
+    // Smooth Scroll Effects for Navigation
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
 
-            if (currentScroll <= 0) {
-                navbar.classList.remove('scroll-up');
-            }
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
 
-            if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
-                navbar.classList.remove('scroll-up');
-                navbar.classList.add('scroll-down');
-            }
+        if (currentScroll <= 0) {
+            navbar.classList.remove('scroll-up');
+        }
 
-            if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
-                navbar.classList.remove('scroll-down');
-                navbar.classList.add('scroll-up');
-            }
+        if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
+            navbar.classList.remove('scroll-up');
+            navbar.classList.add('scroll-down');
+        }
 
-            lastScroll = currentScroll;
-        });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
+        if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
+            navbar.classList.remove('scroll-down');
+            navbar.classList.add('scroll-up');
+        }
+
+        lastScroll = currentScroll;
+    });
+</script>
+
+<!-- jQuery and BookBlock JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
+<script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
 <script>
     $(document).ready(function() {
-        $('#flipbook').turn({
-            width: 600,
-            height: 400,
-            autoCenter: true
+        // Initialize BookBlock
+        const $bookBlock = $('#bb-bookblock').bookblock({
+            speed: 800, // Animation speed
+            shadowSides: 0.8, // Shadow intensity
+            shadowFlip: 0.7, // Shadow intensity during flip
+            autoplay: false, // Disable autoplay
+            orientation: 'horizontal', // Horizontal flip (default)
+            pageSpread: false, // Display one page at a time
         });
-        </script>
 
+        // Navigation Controls
+        $('#bb-nav-prev').on('click', function(e) {
+            e.preventDefault();
+            $bookBlock.bookblock('prev');
+        });
+
+        $('#bb-nav-next').on('click', function(e) {
+            e.preventDefault();
+            $bookBlock.bookblock('next');
+        });
+
+        // Debugging: Log BookBlock initialization
+        console.log('BookBlock initialized successfully');
+    });
+</script>
+</body>
+</html>
 </body>
 </html>
