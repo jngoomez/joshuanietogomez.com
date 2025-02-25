@@ -160,40 +160,59 @@ a:hover {
     filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
 
-/* Flipbook Section */
-#flipbook-section {
-    padding: 60px 10%;
-    background-color: #000;
-    text-align: center;
+/* Flipbook Container */
+#bb-bookblock {
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#flipbook {
-    width: 600px; /* Adjust size as needed */
-    height: 400px; /* Adjust size as needed */
-    margin: 0 auto; /* Centers the flipbook horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
-}
-
-/* Flipbook Pages */
-.page {
-    background: #fff; /* White background for pages */
+.bb-item {
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ddd; /* Optional: Adds a border */
 }
 
-.page img {
+.bb-item img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Ensures images fit within the page */
+    object-fit: contain;
+}
+
+/* Navigation Controls */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bb-nav-prev, .bb-nav-next {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bb-nav-prev:hover, .bb-nav-next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    #flipbook {
-        width: 90%; /* Smaller width for mobile */
-        height: 300px; /* Smaller height for mobile */
+    #bb-bookblock {
+        width: 90%;
+        height: 300px;
+    }
+
+    .bb-nav-prev, .bb-nav-next {
+        font-size: 1rem;
+        padding: 8px 16px;
     }
 }
 
