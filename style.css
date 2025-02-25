@@ -160,49 +160,48 @@ a:hover {
     filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
 
-/* Gallery Sections */
-#paintings, #sketches {
+/* Sketches Section */
+#sketches {
     padding: 60px 10%;
     background-color: #000;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1;
+.sketches-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.sketch-item {
+    flex: 1; /* Each image takes equal space */
+    max-width: 50%; /* Each image takes up half the container */
+}
+
+.sketch-item img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    transition: transform 0.3s ease; /* Optional: Adds hover effect */
+}
+
+.sketch-item img:hover {
+    transform: scale(1.05); /* Optional: Adds hover effect */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .sketches-gallery {
+        flex-direction: column; /* Stack images vertically on mobile */
+        gap: 10px; /* Reduce space between images */
+    }
+
+    .sketch-item {
+        max-width: 100%; /* Each image takes full width on mobile */
+    }
 }
 
 /* Shop Section */
