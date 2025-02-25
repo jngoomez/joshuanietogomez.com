@@ -282,6 +282,12 @@ a:hover {
     50% {
         transform: translateY(-10px);
     }
+
+    .envelope-image {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite; /* Optional animation */
 }
 
 /* Footer */
