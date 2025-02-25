@@ -160,12 +160,17 @@ a:hover {
     filter: grayscale(0%) brightness(100%); /* Restore color on hover */
 }
 /* Flipbook Container */
+#flipbook-section {
+    padding: 60px 10%; /* Add padding to the section */
+    background-color: #000; /* Match your homepage background */
+    text-align: center; /* Center the flipbook */
+}
+
 #bb-bookblock {
-    width: 600px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
-    margin: 50px auto; /* Center the flipbook */
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px; /* Fixed width for the flipbook */
+    height: 400px; /* Fixed height for the flipbook */
+    margin: 0 auto; /* Center the flipbook horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
     overflow: hidden; /* Hide overflow */
 }
 
@@ -180,8 +185,8 @@ a:hover {
 }
 
 .bb-item img {
-    max-width: 100%; /* Ensure images fit within the page */
-    max-height: 100%; /* Ensure images fit within the page */
+    max-width: 90%; /* Ensure images don't take up the whole page */
+    max-height: 90%; /* Ensure images don't take up the whole page */
     object-fit: contain; /* Maintain aspect ratio */
 }
 
