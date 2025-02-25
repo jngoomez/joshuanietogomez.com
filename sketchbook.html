@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Sketchbook</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.css">
-    <style>
-        #flipbook {
-            width: 600px;
-            height: 400px;
-            margin: 0 auto;
-        }
-        .page {
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .page img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+    <title>Sketchbook - Joshua Nieto Gomez</title>
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- BookBlock CSS -->
+    <link rel="stylesheet" href="https://tympanus.net/Development/BookBlock/css/bookblock.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="flipbook">
-        <div class="page"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
-        <div class="page"><img src="ratha.jpg" alt="Sketch 2"></div>
-        <div class="page"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
-        <div class="page"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
+    <!-- Flipbook Container -->
+    <div id="bb-bookblock" class="bb-bookblock">
+        <div class="bb-item"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
+        <div class="bb-item"><img src="ratha.jpg" alt="Sketch 2"></div>
+        <div class="bb-item"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
+        <div class="bb-item"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
+    <!-- Navigation Controls -->
+    <nav>
+        <a id="bb-nav-prev" href="#" class="bb-nav-prev">Previous</a>
+        <a id="bb-nav-next" href="#" class="bb-nav-next">Next</a>
+    </nav>
+
+    <!-- jQuery and BookBlock JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
+    <script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
     <script>
         $(document).ready(function() {
-            $('#flipbook').turn({
-                width: 600,
-                height: 400,
-                autoCenter: true
+            // Initialize BookBlock
+            const $bookBlock = $('#bb-bookblock').bookblock({
+                speed: 800, // Animation speed
+                shadowSides: 0.8, // Shadow intensity
+                shadowFlip: 0.7, // Shadow intensity during flip
+                autoplay: false, // Disable autoplay
+            });
+
+            // Navigation Controls
+            $('#bb-nav-prev').on('click', function(e) {
+                e.preventDefault();
+                $bookBlock.bookblock('prev');
+            });
+
+            $('#bb-nav-next').on('click', function(e) {
+                e.preventDefault();
+                $bookBlock.bookblock('next');
             });
         });
     </script>
