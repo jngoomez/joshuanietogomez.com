@@ -31,26 +31,28 @@
     <script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
     <script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
     <script>
-        $(document).ready(function() {
-            // Initialize BookBlock
-            const $bookBlock = $('#bb-bookblock').bookblock({
-                speed: 800, // Animation speed
-                shadowSides: 0.8, // Shadow intensity
-                shadowFlip: 0.7, // Shadow intensity during flip
-                autoplay: false, // Disable autoplay
-            });
-
-            // Navigation Controls
-            $('#bb-nav-prev').on('click', function(e) {
-                e.preventDefault();
-                $bookBlock.bookblock('prev');
-            });
-
-            $('#bb-nav-next').on('click', function(e) {
-                e.preventDefault();
-                $bookBlock.bookblock('next');
-            });
+    $(document).ready(function() {
+        // Initialize BookBlock
+        const $bookBlock = $('#bb-bookblock').bookblock({
+            speed: 800, // Animation speed
+            shadowSides: 0.8, // Shadow intensity
+            shadowFlip: 0.7, // Shadow intensity during flip
+            autoplay: false, // Disable autoplay
+            orientation: 'horizontal', // Horizontal flip (default)
+            pageSpread: false, // Display one page at a time
         });
-    </script>
+
+        // Navigation Controls
+        $('#bb-nav-prev').on('click', function(e) {
+            e.preventDefault();
+            $bookBlock.bookblock('prev');
+        });
+
+        $('#bb-nav-next').on('click', function(e) {
+            e.preventDefault();
+            $bookBlock.bookblock('next');
+        });
+    });
+</script>
 </body>
 </html>
