@@ -249,21 +249,68 @@ a:hover {
 #shop h2 {
     font-size: 2.5rem;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-.shop-box {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width */
+    gap: 30px; /* Increased spacing between products */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.shop-box:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.product-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for products */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure images fill the container without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.product-info {
+    margin-top: 15px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 10px 0 5px;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+        gap: 20px; /* Reduced spacing for mobile */
+    }
+
+    #shop h2 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .product-item img {
+        height: 200px; /* Smaller height for mobile */
+    }
+}
 /* Process Section */
 #process {
     padding: 60px 10%;
