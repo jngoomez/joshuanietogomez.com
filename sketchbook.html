@@ -17,10 +17,26 @@
     <!-- Flipbook Wrapper -->
     <div class="bb-custom-wrapper">
         <div id="bb-bookblock" class="bb-bookblock">
-            <div class="bb-item"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
-            <div class="bb-item"><img src="ratha.jpg" alt="Sketch 2"></div>
-            <div class="bb-item"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
-            <div class="bb-item"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
+            <div class="bb-item">
+                <div class="image-wrapper">
+                    <img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1">
+                </div>
+            </div>
+            <div class="bb-item">
+                <div class="image-wrapper">
+                    <img src="ratha.jpg" alt="Sketch 2">
+                </div>
+            </div>
+            <div class="bb-item">
+                <div class="image-wrapper">
+                    <img src="images/sketch3.jpg" alt="Sketch 3">
+                </div>
+            </div>
+            <div class="bb-item">
+                <div class="image-wrapper">
+                    <img src="images/sketch4.jpg" alt="Sketch 4">
+                </div>
+            </div>
         </div>
 
         <!-- Navigation Controls -->
@@ -53,8 +69,8 @@
 
             // Function to update navigation buttons
             function updateNavigation() {
-                const currentPage = $bookBlock.data('currentPage');
-                const totalPages = $bookBlock.data('totalPages');
+                const currentPage = $bookBlock.bookblock('current');
+                const totalPages = $bookBlock.children('.bb-item').length;
 
                 // Disable "Previous" button on the first page
                 if (currentPage === 0) {
@@ -74,14 +90,14 @@
             // Navigation Controls
             $('#bb-nav-prev').on('click', function(e) {
                 e.preventDefault();
-                if (!$('#bb-nav-prev').hasClass('disabled')) {
+                if (!$(this).hasClass('disabled')) {
                     $bookBlock.bookblock('prev');
                 }
             });
 
             $('#bb-nav-next').on('click', function(e) {
                 e.preventDefault();
-                if (!$('#bb-nav-next').hasClass('disabled')) {
+                if (!$(this).hasClass('disabled')) {
                     $bookBlock.bookblock('next');
                 }
             });
