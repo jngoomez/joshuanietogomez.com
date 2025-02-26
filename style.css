@@ -258,13 +258,11 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .bb-custom-wrapper {
-        width: 90%; /* Smaller width for mobile */
-    }
-
-    #bb-bookblock {
-        height: 300px; /* Smaller height for mobile */
+        width: 100%;
+        max-width: 100%;
     }
 }
+
 
 /* Shop Section with Custom Texture Background */
 #shop {
