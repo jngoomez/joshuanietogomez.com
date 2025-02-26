@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'arrows';
-    src:url('../fonts/arrows/arrows.eot');
-    src:url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/arrows/arrows.eot');
+    src: url('../fonts/arrows/arrows.eot?#iefix') format('embedded-opentype'),
         url('../fonts/arrows/arrows.woff') format('woff'),
         url('../fonts/arrows/arrows.ttf') format('truetype'),
         url('../fonts/arrows/arrows.svg#arrows') format('svg');
@@ -40,4 +40,30 @@
 .bb-custom-icon-arrow-left:before {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+/* Custom styles for images */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+}
+
+.image-wrapper img {
+    max-width: 90%;  /* Ensure the images fit within the container */
+    height: auto;
+    object-fit: contain;
+    max-height: 85vh; /* Ensures the image fits within the viewport height */
+    display: block;
+    margin: auto;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .bb-item img {
+        max-width: 100%;
+        max-height: 70vh;
+    }
 }
