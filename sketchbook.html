@@ -52,59 +52,59 @@
     <script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
     <script>
         $(document).ready(function() {
-            // Initialize BookBlock
-            const $bookBlock = $('#bb-bookblock').bookblock({
-                speed: 1000, // Animation speed (in milliseconds)
-                shadowSides: 0.8, // Shadow intensity for sides
-                shadowFlip: 0.7, // Shadow intensity during flip
-                easing: 'ease-in-out', // Smooth easing for animations
-                orientation: 'horizontal', // Horizontal flip
-                pageSpread: false, // Display one page at a time
-                direction: 'ltr', // Left-to-right flipping
-                onEndFlip: function() {
-                    // Update navigation buttons after flipping
-                    updateNavigation();
-                }
-            });
+        // Initialize BookBlock
+        const $bookBlock = $('#bb-bookblock').bookblock({
+            speed: 1000, // Animation speed (in milliseconds)
+            shadowSides: 0.8, // Shadow intensity for sides
+            shadowFlip: 0.7, // Shadow intensity during flip
+            easing: 'ease-in-out', // Smooth easing for animations
+            orientation: 'horizontal', // Horizontal flip
+            pageSpread: false, // Display one page at a time
+            direction: 'ltr', // Left-to-right flipping
+            onEndFlip: function() {
+                // Update navigation buttons after flipping
+                updateNavigation();
+            }
+        });
 
-            // Function to update navigation buttons
-            function updateNavigation() {
-                const currentPage = $bookBlock.bookblock('current');
-                const totalPages = $bookBlock.children('.bb-item').length;
+        // Function to update navigation buttons
+        function updateNavigation() {
+            const currentPage = $bookBlock.data('currentPage');
+            const totalPages = $bookBlock.data('totalPages');
 
-                // Disable "Previous" button on the first page
-                if (currentPage === 0) {
-                    $('#bb-nav-prev').addClass('disabled');
-                } else {
-                    $('#bb-nav-prev').removeClass('disabled');
-                }
-
-                // Disable "Next" button on the last page
-                if (currentPage === totalPages - 1) {
-                    $('#bb-nav-next').addClass('disabled');
-                } else {
-                    $('#bb-nav-next').removeClass('disabled');
-                }
+            // Disable "Previous" button on the first page
+            if (currentPage === 0) {
+                $('#bb-nav-prev').addClass('disabled');
+            } else {
+                $('#bb-nav-prev').removeClass('disabled');
             }
 
-            // Navigation Controls
-            $('#bb-nav-prev').on('click', function(e) {
-                e.preventDefault();
-                if (!$(this).hasClass('disabled')) {
-                    $bookBlock.bookblock('prev');
-                }
-            });
+            // Disable "Next" button on the last page
+            if (currentPage === totalPages - 1) {
+                $('#bb-nav-next').addClass('disabled');
+            } else {
+                $('#bb-nav-next').removeClass('disabled');
+            }
+        }
 
-            $('#bb-nav-next').on('click', function(e) {
-                e.preventDefault();
-                if (!$(this).hasClass('disabled')) {
-                    $bookBlock.bookblock('next');
-                }
-            });
-
-            // Initialize navigation buttons
-            updateNavigation();
+        // Navigation Controls
+        $('#bb-nav-prev').on('click', function(e) {
+            e.preventDefault();
+            if (!$('#bb-nav-prev').hasClass('disabled')) {
+                $bookBlock.bookblock('prev');
+            }
         });
-    </script>
+
+        $('#bb-nav-next').on('click', function(e) {
+            e.preventDefault();
+            if (!$('#bb-nav-next').hasClass('disabled')) {
+                $bookBlock.bookblock('next');
+            }
+        });
+
+        // Initialize navigation buttons
+        updateNavigation();
+    });
+</script>
 </body>
 </html>
