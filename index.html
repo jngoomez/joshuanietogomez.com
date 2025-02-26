@@ -10,8 +10,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- External CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- BookBlock CSS -->
+    <link rel="stylesheet" href="https://tympanus.net/Development/BookBlock/css/bookblock.css">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,15 +27,15 @@
     </div>
     <nav class="navbar">
         <ul class="nav-list">
-           <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="paintings.html">Paintings</a></li>
             <li><a href="sketches.html">Sketches</a></li>
             <li><a href="shop.html">Shop JNGOO</a></li>
-              <li>
-            <a href="https://www.instagram.com/jngoosoup" target="_blank">
-                <img src="instagram.png" alt="Instagram" class="instagram-logo">
-            </a>
-        </li>
+            <li>
+                <a href="https://www.instagram.com/jngoosoup" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="instagram-logo">
+                </a>
+            </li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -45,52 +49,53 @@
         </div>
     </section>
 
- <!-- Flipbook Section -->
+    <!-- Flipbook Section -->
     <section id="flipbook-section">
         <h2>Sketches</h2>
-        <div id="bb-bookblock" class="bb-bookblock">
-            <div class="bb-item"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
-            <div class="bb-item"><img src="ratha.jpg" alt="Sketch 2"></div>
-            <div class="bb-item"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
-            <div class="bb-item"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
-        </div>
+        <div class="bb-custom-wrapper">
+            <div id="bb-bookblock" class="bb-bookblock">
+                <div class="bb-item"><img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1"></div>
+                <div class="bb-item"><img src="ratha.jpg" alt="Sketch 2"></div>
+                <div class="bb-item"><img src="images/sketch3.jpg" alt="Sketch 3"></div>
+                <div class="bb-item"><img src="images/sketch4.jpg" alt="Sketch 4"></div>
+            </div>
 
-        <!-- Navigation Controls -->
-        <nav>
-            <a id="bb-nav-prev" href="#" class="bb-nav-prev">Previous</a>
-            <a id="bb-nav-next" href="#" class="bb-nav-next">Next</a>
-        </nav>
+            <!-- Navigation Controls -->
+            <nav>
+                <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+                <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+            </nav>
+        </div>
     </section>
 
-    
-   <!-- Shop Section -->
+    <!-- Shop Section -->
     <section id="shop">
         <h2>Shop JNGOO</h2>
         <a href="shop.html" class="shop-box">Shop</a>
         <p>Coming soon! Stay tuned for prints and merchandise.</p>
     </section>
-    
-   <!-- Thoughts and Process Section -->
-<section id="process">
-    <h2>The Process</h2>
-    <p>all the random things</p>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="images/process1.jpg" alt="Process 1">
-            <div class="overlay">
-                <h3>Sketch to Painting</h3>
-                <p>2025</p>
+
+    <!-- Thoughts and Process Section -->
+    <section id="process">
+        <h2>The Process</h2>
+        <p>All the random things</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/process1.jpg" alt="Process 1">
+                <div class="overlay">
+                    <h3>Sketch to Painting</h3>
+                    <p>2025</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/process2.jpg" alt="Process 2">
+                <div class="overlay">
+                    <h3>Color Exploration</h3>
+                    <p>2025</p>
+                </div>
             </div>
         </div>
-        <div class="gallery-item">
-            <img src="images/process2.jpg" alt="Process 2">
-            <div class="overlay">
-                <h3>Color Exploration</h3>
-                <p>2025</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- About Section -->
     <section id="about">
@@ -101,85 +106,109 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-       <div class="contact-message">
-        <img src="ENVELOPE final.png" alt="Opened Envelope" class="envelope-image">
-        <p>Thank you so much! For questions, please email <a href="mailto:example@email.com">thisisjngo@gmail.com</a>.</p>
-    </div>
-</section>
+        <div class="contact-message">
+            <img src="ENVELOPE final.png" alt="Opened Envelope" class="envelope-image">
+            <p>Thank you so much! For questions, please email <a href="mailto:example@email.com">thisisjngo@gmail.com</a>.</p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
-  </footer>
+    </footer>
 
-<!-- Remove Flickity script if not used -->
-<!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
+    <script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize BookBlock
+            const $bookBlock = $('#bb-bookblock').bookblock({
+                speed: 1000, // Animation speed (in milliseconds)
+                shadowSides: 0.8, // Shadow intensity for sides
+                shadowFlip: 0.7, // Shadow intensity during flip
+                easing: 'ease-in-out', // Smooth easing for animations
+                orientation: 'horizontal', // Horizontal flip
+                pageSpread: false, // Display one page at a time
+                direction: 'ltr', // Left-to-right flipping
+                onEndFlip: function() {
+                    // Update navigation buttons after flipping
+                    updateNavigation();
+                }
+            });
 
-<script>
-    // Sandwich Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
+            // Function to update navigation buttons
+            function updateNavigation() {
+                const currentPage = $bookBlock.data('currentPage');
+                const totalPages = $bookBlock.data('totalPages');
 
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        navList.classList.toggle('active');
-    });
+                // Disable "Previous" button on the first page
+                if (currentPage === 0) {
+                    $('#bb-nav-prev').addClass('disabled');
+                } else {
+                    $('#bb-nav-prev').removeClass('disabled');
+                }
 
-    // Smooth Scroll Effects for Navigation
-    let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
+                // Disable "Next" button on the last page
+                if (currentPage === totalPages - 1) {
+                    $('#bb-nav-next').addClass('disabled');
+                } else {
+                    $('#bb-nav-next').removeClass('disabled');
+                }
+            }
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
+            // Navigation Controls
+            $('#bb-nav-prev').on('click', function(e) {
+                e.preventDefault();
+                if (!$('#bb-nav-prev').hasClass('disabled')) {
+                    $bookBlock.bookblock('prev');
+                }
+            });
 
-        if (currentScroll <= 0) {
-            navbar.classList.remove('scroll-up');
-        }
+            $('#bb-nav-next').on('click', function(e) {
+                e.preventDefault();
+                if (!$('#bb-nav-next').hasClass('disabled')) {
+                    $bookBlock.bookblock('next');
+                }
+            });
 
-        if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
-            navbar.classList.remove('scroll-up');
-            navbar.classList.add('scroll-down');
-        }
-
-        if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
-            navbar.classList.remove('scroll-down');
-            navbar.classList.add('scroll-up');
-        }
-
-        lastScroll = currentScroll;
-    });
-</script>
-
-<!-- jQuery and BookBlock JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
-<script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
-<script>
-    $(document).ready(function() {
-        // Initialize BookBlock
-        const $bookBlock = $('#bb-bookblock').bookblock({
-            speed: 800, // Animation speed
-            shadowSides: 0.8, // Shadow intensity
-            shadowFlip: 0.7, // Shadow intensity during flip
-            autoplay: false, // Disable autoplay
-            orientation: 'horizontal', // Horizontal flip (default)
-            pageSpread: false, // Display one page at a time
+            // Initialize navigation buttons
+            updateNavigation();
         });
 
-        // Navigation Controls
-        $('#bb-nav-prev').on('click', function(e) {
-            e.preventDefault();
-            $bookBlock.bookblock('prev');
+        // Sandwich Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navList.classList.toggle('active');
         });
 
-        $('#bb-nav-next').on('click', function(e) {
-            e.preventDefault();
-            $bookBlock.bookblock('next');
-        });
+        // Smooth Scroll Effects for Navigation
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
 
-        // Debugging: Log BookBlock initialization
-        console.log('BookBlock initialized successfully');
-    });
-</script>
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                navbar.classList.remove('scroll-up');
+            }
+
+            if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
+                navbar.classList.remove('scroll-up');
+                navbar.classList.add('scroll-down');
+            }
+
+            if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
+                navbar.classList.remove('scroll-down');
+                navbar.classList.add('scroll-up');
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>
