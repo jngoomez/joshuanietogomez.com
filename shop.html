@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop JNGOO</title>
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Sandwich Menu -->
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-     <!-- Navigation Menu -->
     <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -26,45 +29,50 @@
             <li><a href="sketches.html">Sketches</a></li>
             <li><a href="shop.html">Shop JNGOO</a></li>
             <li>
-            <a href="https://www.instagram.com/jngoosoup" target="_blank">
-                <img src="instagram.png" alt="Instagram" class="instagram-logo">
-            </a>
-        </li>
-            <li><a href="about.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
+                <a href="https://www.instagram.com/jngoosoup" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="instagram-logo">
+                </a>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <!-- Shop Section -->
     <section id="shop">
-        <h1>JNGOO</h1>
-        <h2>All Products</h2>
+        <h2>Shop JNGOO</h2>
         <div class="product-grid">
-            <!-- Product 1 -->
             <div class="product-item">
-                <img src="xxxprint1.png" alt="Product 1">
-                <p class="product-title">SUMO SHIT</p>
-                <p class="product-price">$10.00</p>
+                <img src="images/product1.jpg" alt="Product 1">
+                <div class="product-info">
+                    <h3 class="product-title">Primary Soldier</h3>
+                    <p class="product-price">$35.00</p>
+                </div>
             </div>
-            <!-- Product 2 -->
             <div class="product-item">
-                <img src="printsample2.png" alt="Product 2">
-                <p class="product-title">(-2-)</p>
-                <p class="product-price">$10.00</p>
+                <img src="images/product2.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3 class="product-title">SUMO SHIT</h3>
+                    <p class="product-price">$10.00</p>
+                </div>
             </div>
-            <!-- Product 3 -->
             <div class="product-item">
                 <img src="images/product3.jpg" alt="Product 3">
-                <p class="product-title">Primary Soldier</p>
-                <p class="product-price">$35.00</p>
+                <div class="product-info">
+                    <h3 class="product-title">Product 3</h3>
+                    <p class="product-price">$10.00</p>
+                </div>
             </div>
             <!-- Add more products as needed -->
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
         // Sandwich Menu Toggle
         const mobileMenu = document.getElementById('mobile-menu');
