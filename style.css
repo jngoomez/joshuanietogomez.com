@@ -83,8 +83,8 @@ a:hover {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Adjust spacing between items */
-    align-items: center; /* Vertically center items */
+    gap: 20px;
+    align-items: center;
 }
 
 .nav-list li a {
@@ -108,6 +108,7 @@ a:hover {
 .nav-list li a:hover::after {
     width: 100%;
 }
+
 /* Hero Section */
 #hero {
     height: 100vh;
@@ -150,49 +151,32 @@ a:hover {
 
 /* Instagram Logo */
 .instagram-logo {
-    width: 24px; /* Adjust size as needed */
+    width: 24px;
     height: 24px;
-    filter: grayscale(100%) brightness(150%); /* Make it monochrome/faded */
+    filter: grayscale(100%) brightness(150%);
     transition: filter 0.3s ease;
 }
 
 .instagram-logo:hover {
-    filter: grayscale(0%) brightness(100%); /* Restore color on hover */
+    filter: grayscale(0%) brightness(100%);
 }
-/* General Styles */
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+
+/* Flipbook Section */
+#flipbook-section {
+    padding: 60px 10%;
     background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-    overflow-x: hidden;
+    text-align: center;
 }
 
-/* Flipbook Wrapper */
 .bb-custom-wrapper {
-    width: 80%; /* Adjust to fit your page */
-    max-width: 900px; /* Set a max width similar to the example */
-    margin: 0 auto; /* Center the flipbook on the page */
-}
-.bb-custom-wrapper img {
-    width: 100%; /* Ensure the image fills the width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
 }
 
-/* Style navigation buttons */
-.bb-custom-icon {
-    padding: 10px 20px;
-    border-radius: 4px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Flipbook Container */
 #bb-bookblock {
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    height: 400px;
     position: relative;
     z-index: 100;
     -webkit-perspective: 1300px;
@@ -202,28 +186,19 @@ body {
     box-shadow: 0 12px 20px -10px rgba(81, 64, 49, 0.6);
 }
 
-/* Flipbook Pages */
-.bb-page {
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: transform;
-}
-
 .bb-item {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff; /* White background for pages */
+    background: #fff;
 }
 
 .bb-item img {
-    max-width: 100%; /* Ensure images fit within the page */
-    max-height: 100%; /* Ensure images fit within the page */
-    object-fit: contain; /* Maintain aspect ratio */
+    width: 100%; /* Ensure images fill the entire page */
+    height: 100%; /* Ensure images fill the entire page */
+    object-fit: cover; /* Fill the page without white space */
 }
 
 /* Navigation Controls */
@@ -233,107 +208,107 @@ body {
     height: 30px;
     text-align: center;
     border-radius: 2px;
-    background: #72b890; /* Green background for buttons */
+    background: #72b890;
     color: #fff;
     font-size: 0;
     margin: 2px;
     cursor: pointer;
 }
-.bb-custom-wrapper nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Add spacing above buttons */
-}
 
 .bb-custom-icon:hover {
-    opacity: 0.6; /* Dim buttons on hover */
+    opacity: 0.6;
 }
 
 .bb-custom-icon.disabled {
-    opacity: 0.5; /* Dim disabled buttons */
-    pointer-events: none; /* Disable clicks */
+    opacity: 0.5;
+    pointer-events: none;
     cursor: not-allowed;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
     .bb-custom-wrapper {
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+    }
+
+    #bb-bookblock {
+        height: 300px;
     }
 }
 
-
-/* Shop Section with Custom Texture Background */
+/* Shop Section */
 #shop {
     padding: 60px 10%;
-    background-image: url('BACKGROUNDSHOPWEB2.png'); /* Add your texture image */
-    background-size: cover; /* Ensures the texture covers the entire section */
-    background-position: center; /* Centers the texture */
-    background-repeat: no-repeat; /* Prevents the texture from repeating */
+    background-image: url('BACKGROUNDSHOPWEB2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
-#shop h1 {
+#shop h2 {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 10px;
 }
 
-#shop h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 40px;
+.shop-box {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width */
-    gap: 20px; /* Space between products */
-    max-width: 1200px;
-    margin: 0 auto;
+.shop-box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.product-item {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for products */
-    border-radius: 10px;
-    padding: 20px;
+/* Process Section */
+#process {
+    padding: 60px 10%;
+    background-color: #000;
     text-align: center;
 }
 
-.product-item img {
-    width: 100%; /* Ensures the image fills its container */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.product-title {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 15px 0 5px;
+.gallery-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
 }
 
-.product-price {
-    font-size: 1rem;
-    color: #ccc;
-    margin: 0;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
-    }
-
-    #shop h1 {
-        font-size: 2rem; /* Smaller font size for mobile */
-    }
-
-    #shop h2 {
-        font-size: 1.2rem; /* Smaller font size for mobile */
-    }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
 
 /* About Section */
 #about {
@@ -344,66 +319,21 @@ body {
 
 /* Contact Section */
 #contact {
-    height: 70vh; /* Full viewport height */
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
+    padding: 60px 10%;
     background-color: #111;
     text-align: center;
-    padding: 20px; /* Adds some padding */
 }
 
 .contact-message {
     max-width: 600px;
-    width: 100%; /* Ensures it doesn't overflow */
-    padding: 20px;
+    margin: 0 auto;
 }
 
 .envelope-image {
-    max-width: 300px; /* Increased size */
-    width: 100%; /* Scales down on smaller screens */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 300px;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
-    animation: bounce 2s infinite; /* Optional animation */
-}
-
-.contact-message p {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0;
-}
-
-.contact-message a {
-    color: #fff;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
-
-.contact-message a:hover {
-    color: #ccc;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    #contact {
-        height: 50vh; /* Smaller height for mobile */
-    }
-    .envelope-image {
-        max-width: 200px; /* Slightly smaller for mobile */
-    }
-
-    .contact-message p {
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 /* Footer */
