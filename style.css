@@ -177,6 +177,14 @@ body {
     text-align: center;
 }
 
+/* Style navigation buttons */
+.bb-custom-icon {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
 /* Flipbook Container */
 #bb-bookblock {
     width: 100%;
