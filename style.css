@@ -173,7 +173,9 @@ a:hover {
     margin: 0 auto;
     position: relative;
 }
-
+.bb-custom-wrapper .bb-bookblock {
+	box-shadow: 0 12px 20px -10px rgb(61 132 201 / 60%);
+}
 #bb-bookblock {
     width: 100%;
     height: 400px;
