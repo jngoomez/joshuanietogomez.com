@@ -172,9 +172,13 @@ body {
 
 /* Flipbook Wrapper */
 .bb-custom-wrapper {
-    width: 600px; /* Adjust width as needed */
-    margin: 50px auto; /* Center the flipbook */
-    text-align: center;
+    width: 80%; /* Adjust to fit your page */
+    max-width: 900px; /* Set a max width similar to the example */
+    margin: 0 auto; /* Center the flipbook on the page */
+}
+.bb-custom-wrapper img {
+    width: 100%; /* Ensure the image fills the width of the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Style navigation buttons */
