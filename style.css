@@ -358,40 +358,6 @@ footer {
     .navbar.active {
         right: 0;
     }
-}
-
-/* The Process Section */
-#process {
-    padding: 60px 10%;
-    background-color: #000;
-    text-align: center;
-}
-
-#process h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-#process p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .navbar {
-        right: -100%;
-    }
-
-    .navbar.active {
-        right: 0;
-    }
 
     .hero-content h1 {
         font-size: 2.5rem; /* Smaller font size for mobile */
@@ -400,9 +366,7 @@ footer {
     .hero-content p {
         font-size: 1.2rem; /* Smaller font size for mobile */
     }
-}
 
-@media (max-width: 768px) {
     .envelope-image {
         max-width: 150px; /* Smaller size for mobile */
     }
