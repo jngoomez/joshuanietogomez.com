@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - JNGOO</title>
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-hero {
+            background-image: url('BACKGROUNDSHOPWEB2.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding-top 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="paintings.html">Paintings</a></li>
+            <li><a href="sketches.html">Sketches</a></li>
+            <li><a href="shop.html">Shop JNGOO</a></li>
+            <li>
+                <a href="https://www.instagram.com/jngoosoup" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="instagram-logo">
+                </a>
+            </li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+        <h1>FAQ</h1>
+    </section>
+
+    <!-- FAQ Container -->
+    <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question">How long does shipping take?</div>
+            <div class="faq-answer">
+                <p>Domestic orders typically ship within 3-5 business days and arrive within 5-7 business days after shipping. International orders may take 2-4 weeks depending on destination.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question">What is your return policy?</div>
+            <div class="faq-answer">
+                <p>We accept returns within 14 days of delivery. Items must be unused and in original condition. Please contact us at thisisjngo@gmail.com to initiate a return.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question">Do you do commissions?</div>
+            <div class="faq-answer">
+                <p>Yes! I'm currently accepting a limited number of commissions. Please email me at thisisjngo@gmail.com with your project details and I'll get back to you within 3-5 business days.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question">What materials do you use?</div>
+            <div class="faq-answer">
+                <p>My original paintings are primarily acrylic on canvas. Prints are high-quality giclée prints on archival paper using pigment-based inks for longevity.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <div class="faq-question">How do I care for my artwork?</div>
+            <div class="faq-answer">
+                <p>Original paintings should be kept away from direct sunlight and extreme humidity. For prints, frame under UV-protective glass and avoid hanging in direct sunlight to prevent fading.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
+    </footer>
+
+    <!-- FAQ JavaScript -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                // Close other open items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Mobile Menu Toggle (Same as other pages)
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
