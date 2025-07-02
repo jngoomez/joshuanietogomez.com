@@ -113,10 +113,12 @@
 
     <!-- Scripts -->
     <script>
-        // Mobile Menu Functionality
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbar = document.getElementById('navbar');
-        
+    // Mobile Menu Functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+    
+    // Only add mobile menu toggle if on mobile
+    if (window.innerWidth <= 768) {
         mobileMenu.addEventListener('click', () => {
             const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
             mobileMenu.classList.toggle('active');
@@ -134,6 +136,29 @@
                 mobileMenu.setAttribute('aria-expanded', 'false');
             });
         });
-    </script>
+    }
+
+    // Scroll behavior for header
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            navbar.classList.remove('scroll-up');
+        }
+
+        if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
+            navbar.classList.remove('scroll-up');
+            navbar.classList.add('scroll-down');
+        }
+
+        if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
+            navbar.classList.remove('scroll-down');
+            navbar.classList.add('scroll-up');
+        }
+
+        lastScroll = currentScroll;
+    });
+</script>
 </body>
 </html>
