@@ -119,29 +119,30 @@ img {
 /* ===== HERO SECTION FIX ===== */
 #hero {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centers vertically */
-    align-items: center;     /* centers horizontally */
-    text-align: center;
     position: relative;
-    padding-top: 120px; /* ensures space below nav */
-    padding-bottom: 80px; /* pushes sketch slideshow down */
-}
-
-.hero-content {
-    z-index: 2;
-    position: relative;
+    padding-top: 100px; /* makes space for fixed navbar */
+    padding-bottom: 80px; /* extra space before next section */
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px; /* spacing between image and JNGOO text */
+    text-align: center;
+}
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-content h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: clamp(3rem, 8vw, 6rem);
     color: #fff;
-    text-shadow: 0 0 15px rgba(0,0,0,0.7);
+    z-index: 2;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
     margin: 0;
 }
 
@@ -152,18 +153,23 @@ img {
 
 /* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 100vw;
+    height: 100%;
 }
 
 .cutout-image {
-    max-height: 70vh;
-    max-width: 80vw;
+    max-height: 80vh;
+    max-width: 90vw;
     object-fit: contain;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
 }
 /* ===== SHOP SECTION ===== */
 #shop {
