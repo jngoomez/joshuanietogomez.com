@@ -221,8 +221,8 @@ img {
 
 /* ===== SKETCHES SECTION ===== */
 #flipbook-section {
-    padding: 80px 0;
-    position: relative;
+    padding: 100px 10% 60px; /* top padding gives space under hero */
+    text-align: center;
 }
 
 .sketches-image-container {
