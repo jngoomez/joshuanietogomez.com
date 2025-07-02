@@ -120,27 +120,29 @@ img {
 #hero {
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center; /* centers vertically */
+    align-items: center;     /* centers horizontally */
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Accounts for header height */
+    padding-top: 120px; /* ensures space below nav */
+    padding-bottom: 80px; /* pushes sketch slideshow down */
 }
 
 .hero-content {
+    z-index: 2;
     position: relative;
-    z-index: 2; /* Above the background image */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* spacing between image and JNGOO text */
 }
 
 .hero-content h1 {
     font-size: clamp(3rem, 8vw, 6rem);
-    margin: 0;
     color: #fff;
     text-shadow: 0 0 15px rgba(0,0,0,0.7);
-    position: relative;
-    z-index: 3;
+    margin: 0;
 }
 
 /* Remove the dark overlay if you want brighter text */
