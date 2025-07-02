@@ -107,6 +107,16 @@ img {
 }
 
 /* ===== HERO SECTION ===== */
+
+<section id="hero">
+    <div class="hero-content">
+        <div class="cutout-image-container">
+            <img src="your-cutout-image.png" alt="JNGOO Artwork" class="cutout-image">
+        </div>
+        <h1>JNGOO</h1>
+    </div>
+</section>
+
 #hero {
     height: 100vh;
     display: flex;
