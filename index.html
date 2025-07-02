@@ -1,124 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>JNGOO</title>
-    <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* ===== SKETCHES SECTION ===== */
-        #flipbook-section {
-            padding: 60px 10%;
-            text-align: center;
-        }
-        
-        .sketches-image-container {
-            max-width: 800px;
-            height: 400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-        }
-        
-        .sketches-image-container img {
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            cursor: pointer;
-            transition: opacity 0.5s ease;
-        }
-        
-        @media (max-width: 768px) {
-            .sketches-image-container {
-                height: 300px;
-                padding: 0 5%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JNGOO</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation Header -->
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="paintings.html">Paintings</a></li>
-            <li><a href="sketches.html">Sketches</a></li>
-            <li><a href="shop.html">Shop JNGOO</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li>
-                <a href="https://www.instagram.com/jngoosoup" target="_blank" rel="noopener noreferrer">
-                    <img src="instagram.png" alt="Instagram" class="instagram-logo">
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="paintings.html">Paintings</a></li>
+      <li><a href="sketches.html">Sketches</a></li>
+      <li><a href="shop.html">Shop JNGOO</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li>
+        <a href="https://www.instagram.com/jngoosoup" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="Instagram" class="instagram-logo" />
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="menu-toggle" id="mobile-menu" aria-label="Menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" id="mobile-menu" aria-label="Menu" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>JNGOO</h1>  
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="cutout-image-container">
+        <img src="artprin2oocutoutt-Photoroom.png" alt="JNGOO Artwork" class="cutout-image" />
+      </div>
+      <h1>JNGOO</h1>
+    </div>
+  </section>
 
-    <!-- Sketch Image Slideshow Section -->
-    <section id="flipbook-section">
-        <div class="sketches-image-container">
-            <img id="sketch-image" src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="JNGOO Sketch">
-        </div>
-    </section>
+  <!-- Sketch Slideshow Section -->
+  <section id="flipbook-section">
+    <div class="sketches-image-container">
+      <img id="sketch-image" src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="JNGOO Sketch" />
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script>
-        // Image Slideshow
-        const sketches = [
-            "6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg",
-            "ratha.jpg",
-            "images/sketch3.jpg",
-            "images/sketch4.jpg"
-        ];
-        let currentSketchIndex = 0;
-        const sketchImage = document.getElementById("sketch-image");
-        
-        sketchImage.addEventListener("click", () => {
-            sketchImage.style.opacity = 0;
-            setTimeout(() => {
-                currentSketchIndex = (currentSketchIndex + 1) % sketches.length;
-                sketchImage.src = sketches[currentSketchIndex];
-                sketchImage.alt = "JNGOO Sketch " + (currentSketchIndex + 1);
-                sketchImage.style.opacity = 1;
-            }, 300);
-        });
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>Shop JNGOO</h2>
+    <a href="shop.html" class="shop-box">Shop</a>
+    <p>Coming soon! Stay tuned for prints and merchandise.</p>
+  </section>
 
-        // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
-        
-        mobileMenu.addEventListener('click', () => {
-            const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
-            mobileMenu.classList.toggle('active');
-            navList.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-            mobileMenu.setAttribute('aria-expanded', !isExpanded);
-        });
-    </script>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-message">
+      <img src="ENVELOPE final.png" alt="Envelope Icon" class="envelope-image" />
+      <p>
+        Thank you so much! For questions, please email
+        <a href="mailto:thisisjngo@gmail.com">thisisjngo@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Image Slideshow
+    const sketches = [
+      "6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg",
+      "ratha.jpg",
+      "images/sketch3.jpg",
+      "images/sketch4.jpg"
+    ];
+    let currentSketchIndex = 0;
+    const sketchImage = document.getElementById("sketch-image");
+
+    sketchImage.addEventListener("click", () => {
+      sketchImage.style.opacity = 0;
+      setTimeout(() => {
+        currentSketchIndex = (currentSketchIndex + 1) % sketches.length;
+        sketchImage.src = sketches[currentSketchIndex];
+        sketchImage.alt = "JNGOO Sketch " + (currentSketchIndex + 1);
+        sketchImage.style.opacity = 1;
+      }, 300);
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+      const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
+      mobileMenu.classList.toggle('active');
+      navList.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+      mobileMenu.setAttribute('aria-expanded', !isExpanded);
+    });
+  </script>
 </body>
 </html>
+
