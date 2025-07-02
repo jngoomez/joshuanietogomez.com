@@ -118,20 +118,22 @@ img {
 
 /* ===== HERO SECTION FIX ===== */
 #hero {
-    height: 100vh;
-    position: relative;
-    padding-top: 100px; /* makes space for fixed navbar */
-    padding-bottom: 80px; /* extra space before next section */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding-top: 100px; /* Push content down so it's not under navbar */
+  z-index: 1;
 }
 .hero-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content h1 {
@@ -153,23 +155,18 @@ img {
 
 /* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .cutout-image {
-    max-height: 80vh;
-    max-width: 90vw;
-    object-fit: contain;
-    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
+  max-height: 70vh;
+  max-width: 80vw;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 /* ===== SHOP SECTION ===== */
 #shop {
