@@ -161,7 +161,7 @@ a:hover {
     filter: grayscale(0%) brightness(100%);
 }
 
-/* Sketch Image Click Slideshow (Replaces Flipbook) */
+/* Sketch Image Slideshow */
 #flipbook-section {
     padding: 60px 10%;
     background-color: #000;
@@ -181,7 +181,7 @@ a:hover {
     max-width: 100%;
     object-fit: contain;
     cursor: pointer;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.5s ease;
 }
 
 /* Shop Section */
@@ -242,59 +242,6 @@ a:hover {
     font-size: 1rem;
     color: #ccc;
     margin: 0;
-}
-
-/* Process Section */
-#process {
-    padding: 60px 10%;
-    background-color: #000;
-    text-align: center;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.gallery-item {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-/* About Section */
-#about {
-    padding: 60px 10%;
-    background-color: #000;
-    text-align: center;
 }
 
 /* Contact Section */
