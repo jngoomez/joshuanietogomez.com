@@ -161,79 +161,27 @@ a:hover {
     filter: grayscale(0%) brightness(100%);
 }
 
-/* Flipbook Section */
+/* Sketch Image Click Slideshow (Replaces Flipbook) */
 #flipbook-section {
     padding: 60px 10%;
     background-color: #000;
     text-align: center;
 }
 
-.bb-custom-wrapper {
-    width: 600px;
-    margin: 0 auto;
-    position: relative;
-}
-
-#bb-bookblock {
-    width: 100%;
-    height: 400px;
-    position: relative;
-    z-index: 100;
-    -webkit-perspective: 1300px;
-    perspective: 1300px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    box-shadow: 0 12px 20px -10px rgba(81, 64, 49, 0.6);
-}
-
-.bb-item {
-    width: 100%;
-    height: 100%;
+.sketches-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    height: 400px;
+    overflow: hidden;
 }
 
-.bb-item img {
-    width: 100%; /* Ensure images fill the entire page */
-    height: 100%; /* Ensure images fill the entire page */
-    object-fit: cover; /* Fill the page without white space */
-}
-
-/* Navigation Controls */
-.bb-custom-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 2px;
-    background: #73d8fa;
-    color: #fff;
-    font-size: 0;
-    margin: 2px;
+.sketches-image-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
     cursor: pointer;
-}
-
-.bb-custom-icon:hover {
-    opacity: 0.6;
-}
-
-.bb-custom-icon.disabled {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .bb-custom-wrapper {
-        width: 90%;
-    }
-
-    #bb-bookblock {
-        height: 300px;
-    }
+    transition: opacity 0.4s ease-in-out;
 }
 
 /* Shop Section */
@@ -254,14 +202,14 @@ a:hover {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width */
-    gap: 30px; /* Increased spacing between products */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .product-item {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for products */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -274,10 +222,10 @@ a:hover {
 }
 
 .product-item img {
-    width: 100%; /* Ensure the image fills its container */
-    height: 250px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensure images fill the container without distortion */
-    border-radius: 10px; /* Optional: Adds rounded corners */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .product-info {
@@ -296,21 +244,6 @@ a:hover {
     margin: 0;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
-        gap: 20px; /* Reduced spacing for mobile */
-    }
-
-    #shop h2 {
-        font-size: 2rem; /* Smaller font size for mobile */
-    }
-
-    .product-item img {
-        height: 200px; /* Smaller height for mobile */
-    }
-}
 /* Process Section */
 #process {
     padding: 60px 10%;
@@ -407,18 +340,35 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem; /* Smaller font size for mobile */
+        font-size: 2.5rem;
     }
 
     .hero-content p {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+        font-size: 1.2rem;
     }
 
     .envelope-image {
-        max-width: 150px; /* Smaller size for mobile */
+        max-width: 150px;
     }
 
     .contact-message p {
-        font-size: 1rem; /* Smaller font size for mobile */
+        font-size: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    #shop h2 {
+        font-size: 2rem;
+    }
+
+    .product-item img {
+        height: 200px;
+    }
+
+    .sketches-image-container {
+        height: 300px;
     }
 }
