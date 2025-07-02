@@ -276,21 +276,25 @@ img {
 
 /* ===== CONTACT SECTION ===== */
 #contact {
-    padding: 60px 10%;
-    background-color: #111;
+    padding: 80px 10%;
+    background-color: transparent; /* Removes black background */
     text-align: center;
 }
 
 .contact-message {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .envelope-image {
-    max-width: 300px;
-    width: 100%;
+    width: 240px; /* ~4x bigger than ~60px default */
+    max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    display: block;
 }
 
 /* ===== FOOTER ===== */
