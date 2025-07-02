@@ -37,7 +37,51 @@ img {
     display: block;
 }
 
-/* ===== MOBILE MENU SYSTEM ===== */
+/* ===== DESKTOP NAVIGATION ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-list li a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+/* ===== MOBILE MENU TOGGLE ===== */
 .menu-toggle {
     display: none;
     position: fixed;
@@ -60,75 +104,6 @@ img {
     background-color: #fff;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: right center;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.98);
-    padding: 80px 30px 30px;
-    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
-    z-index: 1000;
-    overflow-y: auto;
-}
-
-.navbar.active {
-    right: 0;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.nav-list li a {
-    font-size: 1.2rem;
-    padding: 8px 0;
-    position: relative;
-    display: inline-block;
-}
-
-.nav-list li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.nav-list li a:hover::after {
-    width: 100%;
-}
-
-body.menu-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* ===== HERO SECTION ===== */
@@ -165,53 +140,17 @@ body.menu-open {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* ===== SKETCHES SECTION ===== */
-.sketches-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    min-height: 300px;
-    overflow: hidden;
-}
-
-.sketches-image-container img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    cursor: pointer;
-    transition: opacity 0.5s ease;
-}
-
 /* ===== SHOP SECTION ===== */
 #shop {
-    padding: 60px 10%;
+    padding: 100px 0 60px;
     text-align: center;
 }
 
 #shop h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    text-transform: lowercase;
 }
-
-.shop-box {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    background-color: #fff;
-    color: #000;
-    text-transform: uppercase;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.shop-box:hover {
-    background-color: #ccc;
-    transform: translateY(-2px);
-}
-
 
 .product-grid {
     display: grid;
@@ -238,7 +177,6 @@ body.menu-open {
     max-height: 300px;
     object-fit: contain;
     margin: 0 auto;
-    display: block;
 }
 
 .product-info {
@@ -254,25 +192,6 @@ body.menu-open {
     color: #ccc;
     font-weight: 500;
     margin: 0;
-}
-
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 0 5%;
-        gap: 20px;
-    }
-    
-    .product-item {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-    }
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -315,39 +234,86 @@ footer {
     filter: grayscale(0%) brightness(100%);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== MOBILE STYLES ===== */
 @media (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+    }
+    
+    .navbar.active {
+        right: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 0 30px;
+    }
+    
     .menu-toggle {
         display: flex;
     }
-
+    
+    /* Menu Animation */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Body Lock */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Shop Adjustments */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 0 5%;
+        gap: 20px;
+    }
+    
+    .product-item {
+        padding: 15px;
+    }
+    
+    /* Hero Adjustments */
     .hero-content h1 {
         font-size: 2.8rem;
         padding: 0 20px;
     }
-
+    
     .envelope-image {
         max-width: 200px;
-    }
-
-    #shop h2,
-    #contact h2 {
-        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
     .hero-content h1 {
         font-size: 2.2rem;
-    }
-
-    .navbar {
-        width: 85%;
-        padding: 70px 20px 20px;
-    }
-
-    .nav-list li a {
-        font-size: 1.1rem;
     }
 }
 
