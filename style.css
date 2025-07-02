@@ -122,18 +122,25 @@ img {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
-  padding-top: 100px; /* Push content down so it's not under navbar */
-  z-index: 1;
+  padding-top: 100px;
+  background: none;
 }
 .hero-content {
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -163,8 +170,8 @@ img {
 }
 
 .cutout-image {
+  max-width: 100%;
   max-height: 70vh;
-  max-width: 80vw;
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
