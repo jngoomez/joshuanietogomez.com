@@ -150,20 +150,20 @@ img {
 
 /* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .cutout-image {
-    max-height: 70vh;
-    max-width: 80vw;
-    object-fit: contain;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+  max-height: 70vh;
+  max-width: 80vw;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 /* ===== SHOP SECTION ===== */
 #shop {
