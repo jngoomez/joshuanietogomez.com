@@ -219,6 +219,51 @@ img {
     margin: 0;
 }
 
+/* ===== SKETCHES SECTION ===== */
+#flipbook-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.sketches-image-container {
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sketches-image-container img {
+    max-height: 90%;
+    max-width: 90%;
+    object-fit: contain;
+    transition: all 0.5s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .sketches-image-container {
+        width: 90%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sketches-image-container {
+        height: 250px;
+    }
+    
+    .sketches-image-container img {
+        max-height: 85%;
+        max-width: 85%;
+    }
+}
+
 /* ===== CONTACT SECTION ===== */
 #contact {
     padding: 60px 10%;
