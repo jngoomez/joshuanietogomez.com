@@ -6,105 +6,11 @@
     <title>Sketchbook - Joshua Nieto Gomez</title>
     <!-- Normalize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- BookBlock CSS -->
-    <link rel="stylesheet" href="bookblock.css">
-    <!-- Demo CSS -->
-    <link rel="stylesheet" href="demo1.css">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Flipbook Wrapper -->
-    <div class="bb-custom-wrapper">
-        <div id="bb-bookblock" class="bb-bookblock">
-            <div class="bb-item">
-                <div class="bb-custom-wrapper">
-                    <img src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Sketch 1">
-                </div>
-            </div>
-            <div class="bb-item">
-                <div class="bb-custom-wrapper">
-                    <img src="ratha.jpg" alt="Sketch 2">
-                </div>
-            </div>
-            <div class="bb-item">
-                <div class="bb-custom-wrapper">
-                    <img src="images/sketch3.jpg" alt="Sketch 3">
-                </div>
-            </div>
-            <div class="bb-item">
-                <div class="bb-custom-wrapper">
-                    <img src="images/sketch4.jpg" alt="Sketch 4">
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation Controls -->
-        <nav>
-            <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-            <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-        </nav>
-    </div>
-
-    <!-- jQuery and BookBlock JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://tympanus.net/Development/BookBlock/js/modernizr.custom.js"></script>
-    <script src="https://tympanus.net/Development/BookBlock/js/jquery.bookblock.js"></script>
-    <script>
-        $(document).ready(function() {
-        // Initialize BookBlock
-        const $bookBlock = $('#bb-bookblock').bookblock({
-            speed: 1000, // Animation speed (in milliseconds)
-            shadowSides: 0.8, // Shadow intensity for sides
-            shadowFlip: 0.7, // Shadow intensity during flip
-            easing: 'ease-in-out', // Smooth easing for animations
-            orientation: 'horizontal', // Horizontal flip
-            pageSpread: false, // Display one page at a time
-            direction: 'ltr', // Left-to-right flipping
-            onEndFlip: function() {
-                // Update navigation buttons after flipping
-                updateNavigation();
-            }
-        });
-
-        // Function to update navigation buttons
-        function updateNavigation() {
-            const currentPage = $bookBlock.data('currentPage');
-            const totalPages = $bookBlock.data('totalPages');
-
-            // Disable "Previous" button on the first page
-            if (currentPage === 0) {
-                $('#bb-nav-prev').addClass('disabled');
-            } else {
-                $('#bb-nav-prev').removeClass('disabled');
-            }
-
-            // Disable "Next" button on the last page
-            if (currentPage === totalPages - 1) {
-                $('#bb-nav-next').addClass('disabled');
-            } else {
-                $('#bb-nav-next').removeClass('disabled');
-            }
-        }
-
-        // Navigation Controls
-        $('#bb-nav-prev').on('click', function(e) {
-            e.preventDefault();
-            if (!$('#bb-nav-prev').hasClass('disabled')) {
-                $bookBlock.bookblock('prev');
-            }
-        });
-
-        $('#bb-nav-next').on('click', function(e) {
-            e.preventDefault();
-            if (!$('#bb-nav-next').hasClass('disabled')) {
-                $bookBlock.bookblock('next');
-            }
-        });
-
-        // Initialize navigation buttons
-        updateNavigation();
-    });
+   
 </script>
 </body>
 </html>
