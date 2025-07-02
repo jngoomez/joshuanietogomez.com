@@ -2,106 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>JNGOO</title>
     <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== SKETCHES SECTION ===== */
+        #flipbook-section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+        
+        .sketches-image-container {
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        
+        .sketches-image-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: opacity 0.5s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .sketches-image-container {
+                height: 300px;
+                padding: 0 5%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Sandwich Menu -->
-    <button class="menu-toggle" id="mobile-menu" aria-label="Menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
-    
-    <nav class="navbar" id="navbar">
+    <!-- Navigation Header -->
+    <nav class="navbar">
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="paintings.html">Paintings</a></li>
             <li><a href="sketches.html">Sketches</a></li>
             <li><a href="shop.html">Shop JNGOO</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li>
                 <a href="https://www.instagram.com/jngoosoup" target="_blank" rel="noopener noreferrer">
                     <img src="instagram.png" alt="Instagram" class="instagram-logo">
-                    <span class="sr-only">Instagram</span>
                 </a>
             </li>
-            <li><a href="FAQ.html">FAQ</a></li>
         </ul>
     </nav>
 
-   <!-- Hero Section -->
-<section id="hero">
-    <div class="hero-content">
-        <div class="cutout-image-container">
-            <img src="artprin2oocutoutt-Photoroom.png" alt="JNGOO Artwork" class="cutout-image">
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>JNGOO</h1>  
         </div>
-        <h1>JNGOO</h1>
-    </div>
-</section>
+    </section>
 
     <!-- Sketch Image Slideshow Section -->
     <section id="flipbook-section">
         <div class="sketches-image-container">
-            <img id="sketch-image" src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="Artwork by Joshua Nieto Gomez">
+            <img id="sketch-image" src="6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg" alt="JNGOO Sketch">
         </div>
     </section>
-
-    <!-- Shop Section -->
-    <section id="shop">
-        <h2>Shop JNGOO</h2>
-        <a href="shop.html" class="shop-box">Shop Now</a>
-        <p>Coming soon! Stay tuned for prints and merchandise.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-message">
-            <img src="ENVELOPE final.png" alt="Contact JNGOO" class="envelope-image">
-            <p>Thank you so much! For questions, please email <a href="mailto:thisisjngo@gmail.com">thisisjngo@gmail.com</a>.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Joshua Nieto Gomez. All Rights Reserved.</p>
-    </footer>
 
     <!-- Scripts -->
     <script>
-        // Mobile Menu Functionality
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbar = document.getElementById('navbar');
-        
-        mobileMenu.addEventListener('click', () => {
-            const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
-            mobileMenu.classList.toggle('active');
-            navbar.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-            mobileMenu.setAttribute('aria-expanded', !isExpanded);
-        });
-
-        // Close menu when clicking links
-        document.querySelectorAll('.nav-list a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navbar.classList.remove('active');
-                document.body.classList.remove('menu-open');
-                mobileMenu.setAttribute('aria-expanded', 'false');
-            });
-        });
-
         // Image Slideshow
         const sketches = [
             "6D62A187-A7C9-4EC5-87B8-FFC3A63C991E.jpeg",
@@ -117,31 +103,21 @@
             setTimeout(() => {
                 currentSketchIndex = (currentSketchIndex + 1) % sketches.length;
                 sketchImage.src = sketches[currentSketchIndex];
-                sketchImage.alt = "Artwork by Joshua Nieto Gomez - " + (currentSketchIndex + 1);
+                sketchImage.alt = "JNGOO Sketch " + (currentSketchIndex + 1);
                 sketchImage.style.opacity = 1;
             }, 300);
         });
 
-        // Scroll Behavior for Navbar
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                navbar.classList.remove('scroll-up');
-            }
-
-            if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
-                navbar.classList.remove('scroll-up');
-                navbar.classList.add('scroll-down');
-            }
-
-            if (currentScroll < lastScroll && navbar.classList.contains('scroll-down')) {
-                navbar.classList.remove('scroll-down');
-                navbar.classList.add('scroll-up');
-            }
-
-            lastScroll = currentScroll;
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        
+        mobileMenu.addEventListener('click', () => {
+            const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
+            mobileMenu.classList.toggle('active');
+            navList.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            mobileMenu.setAttribute('aria-expanded', !isExpanded);
         });
     </script>
 </body>
