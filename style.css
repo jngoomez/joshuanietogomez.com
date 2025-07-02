@@ -37,26 +37,25 @@ img {
     display: block;
 }
 
-/* ===== DESKTOP NAVIGATION ===== */
+/* ===== DESKTOP HEADER FIX ===== */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px 5%;
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Changed from flex-end to center */
     z-index: 1000;
     transition: transform 0.3s ease;
 }
 
 .nav-list {
-    list-style: none;
+    display: flex;
+    gap: 40px; /* Increased gap between nav items */
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 25px;
-    align-items: center;
+    list-style: none;
 }
 
 .nav-list li a {
@@ -117,16 +116,39 @@ img {
     </div>
 </section>
 
+/* ===== HERO SECTION FIX ===== */
 #hero {
     height: 100vh;
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    padding-top: 80px; /* Accounts for header height */
 }
 
+.hero-content {
+    position: relative;
+    z-index: 2; /* Above the background image */
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0,0,0,0.7);
+    position: relative;
+    z-index: 3;
+}
+
+/* Remove the dark overlay if you want brighter text */
+#hero::before {
+    content: none;
+}
+
+/* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
     position: absolute;
     width: 100%;
@@ -138,29 +160,11 @@ img {
 }
 
 .cutout-image {
-    max-height: 90vh;
-    max-width: 90vw;
+    max-height: 70vh;
+    max-width: 80vw;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
-    /* Adjust these values for your cutout image */
-    mix-blend-mode: multiply;
-    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
-
-.hero-content h1 {
-    position: relative;
-    z-index: 2;
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    margin: 0;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-/* Remove the opacity layer */
-#hero::before {
-    content: none;
-}
-
 /* ===== SHOP SECTION ===== */
 #shop {
     padding: 100px 0 60px;
