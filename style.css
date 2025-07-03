@@ -275,10 +275,11 @@ img {
 }
 
 .envelope-image {
-    width: 240px;
-    max-width: 100%;
+    width: 50vw;           /* 50% of screen width */
+    max-width: 500px;      /* Prevents it from getting TOO big */
     height: auto;
     display: block;
+    margin: 0 auto;        /* Ensures it's centered if not already */
 }
 
 /* ===== FOOTER ===== */
@@ -335,6 +336,12 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    .envelope-image {
+    width: 80vw;
+    max-width: 360px;
+  }
+}
 
     .about-gif {
   width: 90vw;  /* larger on mobile too */
