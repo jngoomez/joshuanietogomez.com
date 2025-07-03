@@ -151,8 +151,8 @@ img {
 
 /* ===== GIF IMAGE ==== */
 .about-gif {
-  width: 100%;
-  max-width: 500px;  /* bigger size for desktops */
+  width: 80vw;
+  max-width: 700px;  /* bigger size for desktops */
   height: auto;
   margin-bottom: 40px;
   display: block;
@@ -337,7 +337,8 @@ footer {
     }
 
     .about-gif {
-  max-width: 300px;  /* larger on mobile too */
+  width: 90vw;  /* larger on mobile too */
+  max-width: none;
 }
 
     #flipbook-section {
