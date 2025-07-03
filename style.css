@@ -151,11 +151,14 @@ img {
 
 /* ===== GIF IMAGE ==== */
 .about-gif {
-    width: 300px;
-    max-width: 80vw;
-    margin: 0 auto;
-    display: block;
-    object-fit: contain;
+  width: 100%;
+  max-width: 500px;  /* bigger size for desktops */
+  height: auto;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
 }
 
 /* ===== CUTOUT IMAGE POSITIONING ===== */
@@ -332,6 +335,10 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    .about-gif {
+  max-width: 300px;  /* larger on mobile too */
+}
 
     #flipbook-section {
         padding: 0;
