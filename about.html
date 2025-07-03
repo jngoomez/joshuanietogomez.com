@@ -26,11 +26,16 @@
       text-align: center;
     }
 
-    .about-gif {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 40px;
-    }
+   .about-gif {
+  width: 80vw;
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
 
     .about-text h1 {
       font-size: 2.8rem;
@@ -45,18 +50,19 @@
     }
 
     @media (max-width: 768px) {
-      .about-gif {
-        max-width: 200px;
-      }
+     .about-gif {
+    width: 90vw;
+    max-width: none;
+  }
 
-      .about-text h1 {
-        font-size: 2rem;
-      }
+  .about-text h1 {
+    font-size: 2rem;
+  }
 
-      .about-text p {
-        font-size: 1rem;
-      }
-    }
+  .about-text p {
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
