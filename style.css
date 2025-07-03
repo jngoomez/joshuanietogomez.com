@@ -159,6 +159,14 @@ img {
     content: none;
 }
 
+/* ===== GIF IMAGE ==== */
+.about-gif {
+    width: 300px;          /* Sets a base size for desktops */
+    max-width: 80vw;       /* Keeps it responsive on smaller screens */
+    margin: 0 auto;        /* Centers the image horizontally */
+    display: block;        /* Allows margin auto to work properly */
+    object-fit: contain;   /* Ensures the image doesn't get distorted */
+}
 /* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
   position: relative;
