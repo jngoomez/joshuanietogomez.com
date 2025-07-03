@@ -104,17 +104,6 @@ img {
     transform-origin: right center;
 }
 
-/* ===== HERO SECTION ===== */
-
-<section id="hero">
-    <div class="hero-content">
-        <div class="cutout-image-container">
-            <img src="artprin2oocutoutt-Photoroom.png" alt="JNGOO Artwork" class="cutout-image">
-        </div>
-        <h1>JNGOO</h1>
-    </div>
-</section>
-
 /* ===== HERO SECTION FIX ===== */
 #hero {
   display: flex;
@@ -353,6 +342,7 @@ footer {
     
     .menu-toggle {
         display: flex;
+        z-index: 1000;
     }
     
     /* Menu Animation */
