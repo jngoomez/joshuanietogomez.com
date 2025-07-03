@@ -344,6 +344,10 @@ footer {
         display: flex;
         z-index: 1000;
     }
+   
+    .cutout-image {
+  margin-top: 80px;
+    }
     
     /* Menu Animation */
     .menu-toggle.active .bar:nth-child(1) {
