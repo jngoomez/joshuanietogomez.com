@@ -43,7 +43,7 @@ img {
     top: 0;
     width: 100%;
     padding: 20px 5%;
-    background-color: transparent; /* Removed the black */
+    background-color: transparent;
     display: flex;
     justify-content: center;
     z-index: 1000;
@@ -52,18 +52,19 @@ img {
 
 .nav-list {
     display: flex;
-    gap: 40px; /* Increased gap between nav items */
+    gap: 40px;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .nav-list li a {
-    font-size: 0.9rem;  /* slightly smaller than before */
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
 }
+
 .nav-list li a::after {
     content: '';
     position: absolute;
@@ -104,7 +105,7 @@ img {
     transform-origin: right center;
 }
 
-/* ===== HERO SECTION FIX ===== */
+/* ===== HERO SECTION ===== */
 #hero {
   display: flex;
   justify-content: center;
@@ -112,7 +113,9 @@ img {
   height: 100vh;
   padding-top: 100px;
   background: none;
+  position: relative;
 }
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -121,14 +124,9 @@ img {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.hero-title {
-  font-size: clamp(3rem, 6vw, 6rem);
-  color: white;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  margin-bottom: 20px;
-  z-index: 2;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .hero-content h1 {
@@ -141,6 +139,9 @@ img {
     z-index: 2;
     text-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
     margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
 }
 
 /* Remove the dark overlay if you want brighter text */
@@ -150,12 +151,13 @@ img {
 
 /* ===== GIF IMAGE ==== */
 .about-gif {
-    width: 600px;          /* Sets a base size for desktops */
-    max-width: 160vw;       /* Keeps it responsive on smaller screens */
-    margin: 0 auto;        /* Centers the image horizontally */
-    display: block;        /* Allows margin auto to work properly */
-    object-fit: contain;   /* Ensures the image doesn't get distorted */
+    width: 300px;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
 }
+
 /* ===== CUTOUT IMAGE POSITIONING ===== */
 .cutout-image-container {
   position: relative;
@@ -166,12 +168,13 @@ img {
 }
 
 .cutout-image {
-  margin-top: 50px;
+  margin-top: 60px;
   max-width: 100%;
-  max-height: 90vh;
+  max-height: 70vh;
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
+
 /* ===== SHOP SECTION ===== */
 #shop {
     padding: 100px 0 60px;
@@ -228,7 +231,7 @@ img {
 
 /* ===== SKETCHES SECTION ===== */
 #flipbook-section {
-    padding: 100px 10% 60px; /* top padding gives space under hero */
+    padding: 100px 10% 60px;
     text-align: center;
 }
 
@@ -252,29 +255,10 @@ img {
     transition: all 0.5s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 900px) {
-    .sketches-image-container {
-        width: 90%;
-        height: 350px;
-    }
-}
-
-@media (max-width: 600px) {
-    .sketches-image-container {
-        height: 250px;
-    }
-    
-    .sketches-image-container img {
-        max-height: 85%;
-        max-width: 85%;
-    }
-}
-
 /* ===== CONTACT SECTION ===== */
 #contact {
     padding: 80px 10%;
-    background-color: transparent; /* Removes black background */
+    background-color: transparent;
     text-align: center;
 }
 
@@ -288,7 +272,7 @@ img {
 }
 
 .envelope-image {
-    width: 240px; /* ~4x bigger than ~60px default */
+    width: 240px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -315,9 +299,59 @@ footer {
     filter: grayscale(0%) brightness(100%);
 }
 
-/* ===== MOBILE STYLES ===== */
+/* ===== HERO SECTION MOBILE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
-    /* Navigation */
+    #hero {
+        height: 50vh;
+        padding-top: 60px;
+        position: relative;
+    }
+
+    .hero-content {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .hero-content h1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .cutout-image {
+        margin-top: 0;
+        max-height: 70%;
+        width: auto;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #flipbook-section {
+        padding: 0;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sketches-image-container {
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+        max-width: none;
+    }
+
+    #shop {
+        padding-top: 40px;
+    }
+
     .navbar {
         right: -100%;
         width: 80%;
@@ -327,66 +361,52 @@ footer {
         justify-content: flex-start;
         padding-top: 80px;
     }
-    
+
     .navbar.active {
         right: 0;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .nav-list {
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
         padding: 0 30px;
     }
-    
+
     .menu-toggle {
         display: flex;
-        z-index: 1000;
     }
-   
-    .cutout-image {
-  margin-top: 60px;
-    }
-    
-    /* Menu Animation */
+
     .menu-toggle.active .bar:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
-    
+
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
-    /* Body Lock */
+
     body.menu-open {
         overflow: hidden;
         position: fixed;
         width: 100%;
         height: 100%;
     }
-    
-    /* Shop Adjustments */
+
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         padding: 0 5%;
         gap: 20px;
     }
-    
+
     .product-item {
         padding: 15px;
     }
-    
-    /* Hero Adjustments */
-    .hero-content h1 {
-        font-size: 2.8rem;
-        padding: 0 20px;
-    }
-    
+
     .envelope-image {
         max-width: 200px;
     }
@@ -397,13 +417,12 @@ footer {
         grid-template-columns: 1fr;
         max-width: 300px;
     }
-    
+
     .hero-content h1 {
         font-size: 2.2rem;
     }
 }
 
-/* ===== ACCESSIBILITY ===== */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
