@@ -43,9 +43,9 @@ img {
     top: 0;
     width: 100%;
     padding: 20px 5%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: transparent; /* Removed the black */
     display: flex;
-    justify-content: center; /* Changed from flex-end to center */
+    justify-content: center;
     z-index: 1000;
     transition: transform 0.3s ease;
 }
@@ -59,12 +59,11 @@ img {
 }
 
 .nav-list li a {
-    font-size: 1rem;
+    font-size: 0.9rem;  /* slightly smaller than before */
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
 }
-
 .nav-list li a::after {
     content: '';
     position: absolute;
