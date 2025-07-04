@@ -111,10 +111,10 @@ img {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 100px;
-  background: none;
   position: relative;
-}
+  background: none;
+  overflow: hidden;
+]
 
 .hero-content {
   display: flex;
