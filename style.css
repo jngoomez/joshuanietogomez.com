@@ -306,16 +306,21 @@ footer {
 /* ===== HERO SECTION MOBILE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
     #hero {
-        height: 50vh;
-        padding-top: 60px;
-        position: relative;
-    }
+    position: relative;     /* Keep this! Needed for absolute children */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-    .hero-content {
-        height: 100%;
-        width: 100%;
-        position: relative;
-    }
+   .hero-content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;     /* Also needed for hero-title to center properly */
+  }
 
     .hero-content h1 {
         position: absolute;
@@ -339,7 +344,7 @@ footer {
 .full-width-hero-image {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;     /* Crop to fill like in screenshot */
+    object-fit: cover;
     display: block;
     margin: 0;
   }
