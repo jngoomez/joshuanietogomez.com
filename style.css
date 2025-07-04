@@ -330,9 +330,8 @@ footer {
   width: 90vw;  /* larger on mobile too */
   max-width: none;
 }
-    .main-hero-image {
-  width: 95vw;
-  margin: 100px auto 30px auto;
+   .full-width-hero-image {
+  height: 60vh;
 }
 
     #flipbook-section {
