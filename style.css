@@ -106,27 +106,28 @@ img {
 }
 
 /* ===== HERO SECTION ===== */
+/* ===== HERO SECTION ===== */
 #hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   position: relative;
-  background: none;
-  overflow: hidden;
+  width: 100%;
+  margin-top: 80px; /* This creates space below the navbar */
+  margin-bottom: 40px; /* This adds space below the image */
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 100%;
   width: 100%;
-  position: relative;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.full-width-hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Limits height while maintaining aspect ratio */
+  object-fit: contain; /* Ensures full image is visible */
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
@@ -142,6 +143,7 @@ img {
     width: 100%;
     text-align: center;
     padding: 0 20px;
+    pointer-events: none; /* Prevents the title from blocking image clicks */
 }
 
 .hero-title {
@@ -175,17 +177,6 @@ img {
   margin-right: auto;
   object-fit: contain;
 }
-
-/* ===== MAIN HERO IMAGE (NON-CUTOUT CENTERED) ===== */
-.full-width-hero-image {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-
-
 
 /* ===== SHOP SECTION ===== */
 #shop {
