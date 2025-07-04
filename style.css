@@ -336,9 +336,13 @@ footer {
   width: 90vw;  /* larger on mobile too */
   max-width: none;
 }
- .full-width-hero-image {
-  height: 100vh;
-}
+.full-width-hero-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;     /* Crop to fill like in screenshot */
+    display: block;
+    margin: 0;
+  }
 
     #flipbook-section {
         padding: 0;
